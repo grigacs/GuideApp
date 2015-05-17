@@ -37,9 +37,9 @@ function menuAnimation(thisPage) {
 }
 
 
-$(document).on('pagecreate', function () {
-   // var PageID = $.mobile.activePage.attr('id');
-        menuAnimation('indexPage');
+$(document).on('pageshow', function () {
+       var PageID = $.mobile.activePage.attr('id');
+        menuAnimation(PageID);
 });
 
 
