@@ -1213,6 +1213,7 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 
 .ui-page {
     outline: 0
+    -webkit-backface-visibility: hidden !important;
 }
 
 .ui-mobile .ui-page-active {
