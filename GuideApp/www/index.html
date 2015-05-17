@@ -10,23 +10,24 @@
     <script src="js/ajaxDataLoader.js"></script>
 </head>
 <body>
-
-<div data-role="page" id="pageone">
-    <div data-role="panel" id="overlayPanel" data-display="overlay">
-        <h2>Reveal Panel</h2>
-        <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+<div data-role="page" id="indexPage">
+    <div data-role="panel" id="overlayPanelindexPage" data-display="overlay">
+        <a href="#languagePage" class="resetMenuAnimation" data-role="button"  data-transition="none">English</a>
+        <a href="#languagePage" class="resetMenuAnimation"  data-role="button"  data-transition="none">Hungarian</a>
+        <a href="#languagePage" class="resetMenuAnimation"  data-role="button"  data-transition="none">German</a>
+        <a href="#languagePage" class="resetMenuAnimation"  data-role="button"  data-transition="none">Serbian</a>
     </div>
-    <div data-role="header" id="header" data-position="fixed">
-        <div id="nav-icon1">
+    <div data-role="header" id="headerindexPage" data-position="fixed" >
+        <div id="nav-icon1indexPage" class="navIconAnimation">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <h1>Page Header</h1>
+        <h1>Museum</h1>
     </div>
 
     <div data-role="main" class="ui-content">
-        <div id="result">
+        <div class="result">
 
         </div>
     </div>
@@ -36,6 +37,32 @@
     </div>
 </div>
 
+<div data-role="page" id="languagePage">
+    <div data-role="panel" id="overlayPanellanguagePage" data-display="overlay">
+        <h2>Reveal Panel</h2>
+        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none" >English</a>
+        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">Hungarian</a>
+        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">German</a>
+        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">Serbian</a>
+    </div>
+    <div data-role="header" id="headerlanguagePage" data-position="fixed">
+        <div id="nav-icon1languagePage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>Page Header</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div class="result">
+
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h1>Page Footer</h1>
+    </div>
+</div>
 </body>
 </html>
-
