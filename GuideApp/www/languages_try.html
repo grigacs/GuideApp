@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/CustomizeMenu.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/MenuButtonAnimation.js"></script>
+    <script src="js/ajaxDataLoader.js"></script>
+    <script src="js/LanguageSettings.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="panel" id="overlayPanel" data-display="overlay">
+        <div id="languages">
+            <ul>
+                <li onclick="changeContent('Serbian');">Srpski</li>
+                <li onclick="changeContent('Hungarian');">Magyar</li>
+                <li onclick="changeContent('Croatian');">Hrvatski</li>
+                <li onclick="changeContent('English');">English</li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div data-role="header" id="header" data-position="fixed">
+        <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 id="contentTitle"></h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div id="result">
+            <div id="contentBody_Serbian">
+                Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
+            </div>
+            <div id="contentBody_Hungarian">
+                Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
+            </div>
+            <div id="contentBody_Croatian">
+                Ovo rečenica je na hrvatskom. Samo da pogledam da sve je okej.
+            </div>
+            <div id="contentBody_English">
+                This sentence is in english. Just to be sure in case something is wrong.
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <h1 id="contentFooter"></h1>
+    </div>
+</div>
+
+</body>
+</html>
+
