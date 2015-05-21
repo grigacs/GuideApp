@@ -3,7 +3,7 @@
  */
 var storeObject = {
     language:''
-}
+};
 
 function changeContent(language) {
 

@@ -6,47 +6,61 @@
     <link rel="stylesheet" href="css/CustomizeMenu.css">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/MenuButtonAnimation.js"></script>
     <script src="js/ajaxDataLoader.js"></script>
     <script src="js/LanguageSettings.js"></script>
     <script src="js/jquery.session.js"></script>
+    <script src="js/MenuButtonAnimation.js"></script>
 </head>
 <body>
-<div data-role="page" id="indexPage">
-    <div data-role="panel" id="overlayPanelindexPage" data-display="overlay">
-        <a href="#languagePage" class="resetMenuAnimation" id="english"  data-role="button"   data-transition="none">English</a>
-        <a href="#languagePage" class="resetMenuAnimation" id="hungarian"  data-role="button"   data-transition="none">Hungarian</a>
-        <a href="#languagePage" class="resetMenuAnimation" id="german" data-role="button"   data-transition="none">German</a>
-        <a href="#languagePage" class="resetMenuAnimation" id="serbian"  data-role="button"   data-transition="none">Serbian</a>
+
+<!-- Page One Start (Language Page) -->
+
+<div data-role="page" id="indexPage" data-position="fixed">
+    <div data-role="panel" id="overlayPanelindexPage"  data-display="overlay" data-position-fixed="true">
+
+        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
+        <a href="#" class="showLanguage color_next" data-transition="none" >Languages<span id="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="#indexPage" class="resetMenuAnimation color_next" id="serbian" data-transition="none">Serbian</a></li>
+            <li><a href="#indexPage" class="resetMenuAnimation color_next" id="hungarian" data-transition="none">Hungarian</a></li>
+            <li><a href="#indexPage" class="resetMenuAnimation color_next" id="croatian" data-transition="none">Croatian</a></li>
+            <li><a href="#indexPage" class="resetMenuAnimation color_next" id="english" data-transition="none">English</a></li>
+            <li><a href="#indexPage" class="resetMenuAnimation color_next last_language" id="german" data-transition="none">German</a></li>
+        </ul>
+        <a href="#" class="showLanguage color" data-transition="none" >About</a>
     </div>
-    <div data-role="header" id="headerindexPage" data-position="fixed" >
+    <div data-role="header" id="headerindexPage" data-position="fixed" data-tap-toggle="false">
         <div id="nav-icon1indexPage" class="navIconAnimation">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <h1>Museum</h1>
+        <h1>City Museum</h1>
     </div>
 
     <div data-role="main" class="ui-content">
-        <div class="result">
-
+        <div id="languages">
+            <h1 class="languageText">Choose your language: </h1>
+            <a href="#indexPage" class="languageButton" data-transition="none" >Serbian<span class="arrow"> > </span></a>
+            <a href="#indexPage" class="languageButton" data-transition="none" >Hungarian<span class="arrow"> > </span></a>
+            <a href="#indexPage" class="languageButton" data-transition="none" >Croatian<span class="arrow"> > </span></a>
+            <a href="#indexPage" class="languageButton" data-transition="none" >English<span class="arrow"> > </span></a>
+            <a href="#indexPage" class="languageButton" data-transition="none" >German<span class="arrow"> > </span></a>
         </div>
     </div>
 
-    <div data-role="footer" data-position="fixed">
-        <h1>Page Footer</h1>
+    <div data-role="footer" id="myPageFooter1"  data-position="fixed" >
+        <h1>Museum Subotica</h1>
     </div>
 </div>
 
-<div data-role="page" id="languagePage">
+
+<!-- Page One End (Language Page end) -->
+
+<div data-role="page" id="languagePage" data-position="fixed">
     <div data-role="panel" id="overlayPanellanguagePage" data-display="overlay">
-        <h2>Reveal Panel</h2>
-        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none" >English</a>
-        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">Hungarian</a>
-        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">German</a>
-        <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">Serbian</a>
-    </div>
+        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
+        <a href="#indexPage" class="resetMenuAnimation color_next" data-transition="none" >Languages</a> </div>
     <div data-role="header" id="headerlanguagePage" data-position="fixed">
         <div id="nav-icon1languagePage" class="navIconAnimation">
             <span></span>
@@ -73,7 +87,7 @@
         </div>
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" id="myPageFooter2" data-position="fixed">
         <h1 id="contentFooter"></h1>
     </div>
 </div>

@@ -983,17 +983,20 @@ legend, .ui-input-text input, .ui-input-search input {
 }
 
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
-    background-color: #f9f9f9;
+    background-color: #e7e7e7;
     border-color: #bbb;
     color: #333;
     text-shadow: 0 1px 0 #f3f3f3
+
 }
 
 .ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
-    background-color: #28ABE3;
+    background-color: rgb(101,133,158);
     color: #ffffff;
     border-color: #ddd;
-    text-shadow: 0 1px 0 #f3f3f3
+    text-shadow: 0 1px 0 #f3f3f3;
+    opacity: 0.93;
+    
 }
 
 .ui-body-a {
@@ -3761,6 +3764,7 @@ ul.ui-grid-a, ul.ui-grid-b, ul.ui-grid-c, ul.ui-grid-d, ul.ui-grid-solo, li.ui-b
     list-style: none
 }
 
+
 .ui-content .ui-listview, .ui-panel-inner > .ui-listview {
     margin: -1em
 }
@@ -4704,7 +4708,7 @@ html .ui-field-contain > label + .ui-flipswitch, html .ui-popup .ui-field-contai
 }
 
 .ui-panel-inner {
-    padding: 3em 1em 1em 1em
+    padding: 2.7em 0 0 0;
 }
 
 .ui-panel-page-container {
