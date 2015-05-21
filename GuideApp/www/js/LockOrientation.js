@@ -4,7 +4,7 @@ $( window ).on( "orientationchange", function( event ) {
         alert("portrait");
     }
     else
-        jQuery.mobile.orientationChangeEnabled = false;
+        $.mobile.orientationChangeEnabled = false;
 });
 
 
