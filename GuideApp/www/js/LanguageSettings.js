@@ -1,19 +1,9 @@
 /**
  * Created by Péter on 2015.05.17..
  */
-$(document).ready(function () {
-
-
-
-    $("#contentTitle").html("Page header");
-    $("#contentBody_English").show();
-    $("#contentBody_Hungarian").hide();
-    $("#contentBody_Croatian").hide();
-    $("#contentBody_Serbian").hide();
-    $("#contentFooter").html("Page footer");
-
-
-});
+var storeObject = {
+    language:''
+}
 
 function changeContent(language) {
 
@@ -24,7 +14,7 @@ function changeContent(language) {
             $("#contentTitle").html("Glavna Strana");
             $("#contentBody_"+language).show();
             $("#contentBody_Hungarian").hide();
-            $("#contentBody_Croatian").hide();
+            $("#contentBody_German").hide();
             $("#contentBody_English").hide();
             $("#contentFooter").html("Dno strana");
             break;
@@ -33,25 +23,25 @@ function changeContent(language) {
             $("#contentTitle").html("Oldal teteje");
             $("#contentBody_"+language).show();
             $("#contentBody_Serbian").hide();
-            $("#contentBody_Croatian").hide();
+            $("#contentBody_German").hide();
             $("#contentBody_English").hide();
             $("#contentFooter").html("Oldal alja");
             break;
 
-        case "Croatian":
-            $("#contentTitle").html("Glavna Strana");
+        case "German":
+            $("#contentTitle").html("Seitenkopf");
             $("#contentBody_"+language).show();
             $("#contentBody_Hungarian").hide();
             $("#contentBody_Serbian").hide();
             $("#contentBody_English").hide();
-            $("#contentFooter").html("Dno strana");
+            $("#contentFooter").html("Fußleiste");
             break;
 
         case "English":
             $("#contentTitle").html("Page header");
             $("#contentBody_"+language).show();
             $("#contentBody_Hungarian").hide();
-            $("#contentBody_Croatian").hide();
+            $("#contentBody_German").hide();
             $("#contentBody_Serbian").hide();
             $("#contentFooter").html("Page footer");
             break;
@@ -59,3 +49,60 @@ function changeContent(language) {
 
     }
 }
+
+
+
+$(document).on('pagebeforeshow', '#indexPage', function(){       
+    $(document).on('tap', '#english', function(){     
+        // store some data
+        storeObject.language = 'English';
+        //Change page
+        $.mobile.changePage("#languagePage");
+    });    
+});
+
+$(document).on('pagebeforeshow', '#indexPage', function(){       
+    $(document).on('tap', '#hungarian', function(){     
+        // store some data
+        storeObject.language = 'Hungarian';
+        //Change page
+        $.mobile.changePage("#languagePage");
+    });    
+});
+
+$(document).on('pagebeforeshow', '#indexPage', function(){       
+    $(document).on('tap', '#german', function(){     
+        // store some data
+        storeObject.language = 'German';
+        //Change page
+        $.mobile.changePage("#languagePage");
+    });    
+});
+
+$(document).on('pagebeforeshow', '#indexPage', function(){       
+    $(document).on('tap', '#serbian', function(){     
+        // store some data
+        storeObject.language = 'Serbian';
+        //Change page
+        $.mobile.changePage("#languagePage");
+    });    
+});
+
+
+$(document).on('pagebeforeshow','#languagePage',function(){
+
+    $.session.set("language",storeObject.language);
+
+});
+
+
+
+$(document).on("pageshow","#languagePage",function(){
+   changeContent($.session.get("language"));
+});
+
+
+
+
+
+

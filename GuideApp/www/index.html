@@ -8,14 +8,16 @@
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/MenuButtonAnimation.js"></script>
     <script src="js/ajaxDataLoader.js"></script>
+    <script src="js/LanguageSettings.js"></script>
+    <script src="js/jquery.session.js"></script>
 </head>
 <body>
 <div data-role="page" id="indexPage">
     <div data-role="panel" id="overlayPanelindexPage" data-display="overlay">
-        <a href="#languagePage" class="resetMenuAnimation" data-role="button"  data-transition="none">English</a>
-        <a href="#languagePage" class="resetMenuAnimation"  data-role="button"  data-transition="none">Hungarian</a>
-        <a href="#languagePage" class="resetMenuAnimation"  data-role="button"  data-transition="none">German</a>
-        <a href="#languagePage" class="resetMenuAnimation"  data-role="button"  data-transition="none">Serbian</a>
+        <a href="#languagePage" class="resetMenuAnimation" id="english"  data-role="button"   data-transition="none">English</a>
+        <a href="#languagePage" class="resetMenuAnimation" id="hungarian"  data-role="button"   data-transition="none">Hungarian</a>
+        <a href="#languagePage" class="resetMenuAnimation" id="german" data-role="button"   data-transition="none">German</a>
+        <a href="#languagePage" class="resetMenuAnimation" id="serbian"  data-role="button"   data-transition="none">Serbian</a>
     </div>
     <div data-role="header" id="headerindexPage" data-position="fixed" >
         <div id="nav-icon1indexPage" class="navIconAnimation">
@@ -51,18 +53,31 @@
             <span></span>
             <span></span>
         </div>
-        <h1>Page Header</h1>
+        <h1 id="contentTitle"></h1>
     </div>
 
     <div data-role="main" class="ui-content">
         <div class="result">
-
+            <div id="contentBody_Serbian">
+                Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
+            </div>
+            <div id="contentBody_Hungarian">
+                Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
+            </div>
+            <div id="contentBody_German">
+                Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
+            </div>
+            <div id="contentBody_English">
+                This sentence is in english. Just to be sure in case something is wrong.
+            </div>
         </div>
     </div>
 
     <div data-role="footer" data-position="fixed">
-        <h1>Page Footer</h1>
+        <h1 id="contentFooter"></h1>
     </div>
 </div>
+
+
 </body>
 </html>
