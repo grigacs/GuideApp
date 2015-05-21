@@ -4,11 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/CustomizeMenu.css">
+    <link rel="stylesheet" href="css/TileMenu.css" />
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/ajaxDataLoader.js"></script>
     <script src="js/LanguageSettings.js"></script>
     <script src="js/jquery.session.js"></script>
+<<<<<<< HEAD
     <script src="js/MenuButtonAnimation.js"></script>
 </head>
 <body>
@@ -46,9 +48,62 @@
             <a href="#indexPage" class="languageButton" data-transition="none" >Croatian<span class="arrow"> > </span></a>
             <a href="#indexPage" class="languageButton" data-transition="none" >English<span class="arrow"> > </span></a>
             <a href="#indexPage" class="languageButton" data-transition="none" >German<span class="arrow"> > </span></a>
-        </div>
-    </div>
+=======
+    <script src="js/LockOrientation.js"></script>
 
+</head>
+<body onload="window.screen.lockOrientation(orientation);">
+
+    <!-- start index page -->
+
+    <div data-role="page" id="indexPage">
+        <div data-role="panel" id="overlayPanelindexPage" data-display="overlay">
+            <a href="#languagePage" class="resetMenuAnimation" id="english"  data-role="button"   data-transition="none">English</a>
+            <a href="#languagePage" class="resetMenuAnimation" id="hungarian"  data-role="button"   data-transition="none">Hungarian</a>
+            <a href="#languagePage" class="resetMenuAnimation" id="german" data-role="button"   data-transition="none">German</a>
+            <a href="#languagePage" class="resetMenuAnimation" id="serbian"  data-role="button"   data-transition="none">Serbian</a>
+        </div>
+        <div data-role="header" id="headerindexPage" data-position="fixed" >
+            <div id="nav-icon1indexPage" class="navIconAnimation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>Museum</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="result">
+
+                    <div class="tile red">
+                        <h4 class="title"><a href="#mapPage">Map</a></h4>
+                    </div>
+                    <div class="tile orange">
+                        <h4 class="title"><a href="#mapPage">Guide</a></h4>
+                    </div>
+
+
+                    <div class="tile purple">
+                        <h4 class="title"><a href="#mapPage">Intro</a></h4>
+                    </div>
+                    <div class="tile blue">
+                        <h4 class="title"><a href="#mapPage">Game</a></h4>
+                    </div>
+
+
+                    <div class="tile green">
+                    <h4 class="title"><a href="#mapPage">Events</a></h4>
+                    </div>
+                    <div class="tile asphalt">
+                        <h4 class="title"><a href="#mapPage">Info</a></h4>
+                    </div>
+                </div>
+
+
+>>>>>>> 68175bb478756106df657a068582f47485555771
+        </div>
+
+<<<<<<< HEAD
     <div data-role="footer" id="myPageFooter1"  data-position="fixed" >
         <h1>Museum Subotica</h1>
     </div>
@@ -66,31 +121,94 @@
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <h1 id="contentTitle"></h1>
-    </div>
-
-    <div data-role="main" class="ui-content">
-        <div class="result">
-            <div id="contentBody_Serbian">
-                Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
-            </div>
-            <div id="contentBody_Hungarian">
-                Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
-            </div>
-            <div id="contentBody_German">
-                Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
-            </div>
-            <div id="contentBody_English">
-                This sentence is in english. Just to be sure in case something is wrong.
-            </div>
+=======
+        <div data-role="footer" data-position="fixed">
+            <h1>Page Footer</h1>
+>>>>>>> 68175bb478756106df657a068582f47485555771
         </div>
     </div>
+    <!-- end index page -->
 
+    <!-- start language page -->
+
+    <div data-role="page" id="languagePage">
+        <div data-role="panel" id="overlayPanellanguagePage" data-display="overlay">
+            <h2>Reveal Panel</h2>
+            <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none" >English</a>
+            <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">Hungarian</a>
+            <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">German</a>
+            <a href="#indexPage" data-role="button" class="resetMenuAnimation"   data-transition="none">Serbian</a>
+        </div>
+        <div data-role="header" id="headerlanguagePage" data-position="fixed">
+            <div id="nav-icon1languagePage" class="navIconAnimation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 id="contentTitle"></h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="result">
+                <div id="contentBody_Serbian">
+                    Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
+                </div>
+                <div id="contentBody_Hungarian">
+                    Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
+                </div>
+                <div id="contentBody_German">
+                    Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
+                </div>
+                <div id="contentBody_English">
+                    This sentence is in english. Just to be sure in case something is wrong.
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1 id="contentFooter"></h1>
+        </div>
+    </div>
+
+
+    <!-- End language page -->
+
+    <!-- start map page -->
+
+    <div data-role="page" id="mapPage">
+        <div data-role="panel" id="overlayPanelmapPage" data-display="overlay">
+            <a href="#languagePage" class="resetMenuAnimation"   data-role="button"   data-transition="none">English</a>
+            <a href="#languagePage" class="resetMenuAnimation"   data-role="button"   data-transition="none">Hungarian</a>
+            <a href="#languagePage" class="resetMenuAnimation"   data-role="button"   data-transition="none">German</a>
+            <a href="#languagePage" class="resetMenuAnimation"   data-role="button"   data-transition="none">Serbian</a>
+        </div>
+        <div data-role="header" id="headermapPage" data-position="fixed" >
+            <div id="nav-icon1mapPage" class="navIconAnimation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>Museum</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="result">
+                <p>this is the map page</p>
+
+            </div>
+        </div>
+
+<<<<<<< HEAD
     <div data-role="footer" id="myPageFooter2" data-position="fixed">
         <h1 id="contentFooter"></h1>
+=======
+        <div data-role="footer" data-position="fixed">
+            <h1>Page Footer</h1>
+        </div>
+>>>>>>> 68175bb478756106df657a068582f47485555771
     </div>
-</div>
+    <!-- end map page -->
+
 
 
 </body>

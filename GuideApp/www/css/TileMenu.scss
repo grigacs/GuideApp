@@ -1,0 +1,82 @@
+$color_purple: #5133AB;
+$color_red: #AC193D;
+$color_orange: #DC572E;
+$color_green: #00A600;
+$color_blue: #2672EC;
+$color_asphalt: #34495e;
+// colors from http://www.creepyed.com/2012/09/windows-8-colors-hex-code/
+
+.tile {
+  float:left;
+  width: 50%;
+  display: inline-block;
+  //-moz-box-sizing: border-box;
+  //-webkit-box-sizing: border-box;
+  //box-sizing: border-box;
+  background: #fff;
+  padding: 15.5% 0;
+  margin-bottom:2px;
+
+
+
+  .title{
+    text-align:center;
+
+    a{
+      text-decoration: none;
+      color:white;
+    }
+  }
+
+
+  &.purple, &.blue, &.red, &.orange, &.green, &.asphalt {
+    color: #fff;
+  }
+
+  &.purple {
+    background: $color_purple;
+
+    &:hover {
+      background: darken($color_purple, 10%);
+    }
+  }
+
+  &.red {
+    background: $color_red;
+
+    &:hover {
+      background: darken($color_red, 10%);
+    }
+  }
+
+  &.asphalt{
+    background: $color_asphalt;
+    &:hover{
+      background: darken($color_asphalt,10%);
+    }
+  }
+
+  &.green {
+    background: $color_green;
+
+    &:hover {
+      background: darken($color_green, 10%);
+    }
+  }
+
+  &.blue {
+    background: $color_blue;
+
+    &:hover {
+      background: darken($color_blue, 10%);
+    }
+  }
+
+  &.orange {
+    background: $color_orange;
+
+    &:hover {
+      background: darken($color_orange, 10%);
+    }
+  }
+}
