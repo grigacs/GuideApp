@@ -9,7 +9,7 @@ function getDataFromJson(){
             console.log(data)
         });
         // test for events
-        $(".result").append("<a id='clickMe' href='http://192.168.1.8/ajaxProbaJson/index.php'>FROM</a><br/><a id='clickMe2' href='http://192.168.1.7/ajaxProbaJson/index.php'>FROM</a>");
+        $(".result").append("<a id='clickMe' href='http://192.168.1.8/ajaxProbaJson/index.php'>FROM</a><br/><a id='clickMe2' href='http://192.168.1.8/ajaxProbaJson/index.php'>FROM</a>");
 
         // end
     });

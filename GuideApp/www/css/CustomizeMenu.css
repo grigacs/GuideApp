@@ -5,8 +5,8 @@ body{
 #nav-icon1indexPage, #nav-icon1languagePage  {
     width: 40px;
     height: 30px;
-    position: fixed;
-    top:2.5px;
+    position: absolute;
+    top:2px;
     left:5px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -168,7 +168,7 @@ a.languageButton:hover{
     border-left: 10px solid #67b168;
 }
 
-#chooseLanguage{
+.chooseLanguage{
     float: right;
     margin-right: 10%;
     font-size: 15px;
