@@ -25,7 +25,7 @@ function menuAnimation(thisPage) {
         toggleOpen = false;
     });
 
-    $(window).off("swiperight").on("swiperight", function () {
+    /*$(window).off("swiperight").on("swiperight", function () {
         $('#overlayPanel' + thisPage).panel('open');
         $('.navIconAnimation').addClass('open');
         menuAnimation = true;
@@ -35,7 +35,34 @@ function menuAnimation(thisPage) {
         $('#overlayPanel' + thisPage).panel('close');
         $('.navIconAnimation').removeClass('open');
         menuAnimation = false;
-    });
+    });*/
+
+    $( "body" ).off("touchstart").on( "touchstart", function( e ) {
+        if( e.originalEvent.touches.length == 1 ) { // one finger touch
+// Remember start location.
+            var touch = e.originalEvent.touches[ 0 ];
+            startLoc = { x : touch.pageX, y : touch.pageY };
+        }
+    } );
+
+    $( "body").off("touchmove").on( "touchmove", function( e ) {
+// Only check first move after the touchstart.
+        if( startLoc ) {
+            var touch = e.originalEvent.touches[ 0 ];
+// Check if the horizontal movement is bigger than the vertical movement.
+            if( Math.abs( startLoc.x - touch.pageX ) >
+                Math.abs( startLoc.y - touch.pageY ) ) {
+                $('#overlayPanel' + thisPage).panel('open');
+                $('.navIconAnimation').addClass('open');
+                menuAnimation = true;
+// Prevent default, like scrolling.
+                e.preventDefault();
+            }
+            startLoc = null;
+        }
+    } );
+
+
 
     $(document).off("tap", '.resetMenuAnimation').on("tap", '.resetMenuAnimation', function () {
         $('.navIconAnimation').removeClass('open');

@@ -15,4 +15,4 @@ if ( ! window.plugins.orientationLock ) {
   window.plugins.orientationLock = new OrientationLock()
 }
 
-module.exports = OrientationLock
+module.exports = OrientationLock;
