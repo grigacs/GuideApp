@@ -22,11 +22,11 @@
         <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
         <a href="#" class="showLanguage color_next" data-transition="none" >Languages<span class="chooseLanguage">+</span></a>
         <ul class="allLanguage">
-            <li><a href="#" class="resetMenuAnimation color_next serbian" data-transition="none">Serbian</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next hungarian" data-transition="none">Hungarian</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next croatian" data-transition="none">Croatian</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next english" data-transition="none">English</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next last_language german" data-transition="none">German</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="serbian" data-transition="none">Serbian</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="hungarian" data-transition="none">Hungarian</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="croatian" data-transition="none">Croatian</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="english" data-transition="none">English</a></li>
+            <li><a href="" class="resetMenuAnimation color_next last_language" data-name="german" data-transition="none">German</a></li>
         </ul>
         <a href="#" class="resetMenuAnimation color" data-transition="none" >About</a>
     </div>
@@ -42,11 +42,11 @@
     <div data-role="main" class="ui-content">
         <div id="languages">
             <h1 class="languageText">Choose your language: </h1>
-            <a href="#menuPage" class="languageButton serbian" data-transition="none" >Serbian<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton hungarian" data-transition="none" >Hungarian<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton croatian" data-transition="none" >Croatian<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton english" data-transition="none" >English<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton german" data-transition="none" >German<span class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="serbian" data-transition="none" >Serbian<span class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="hungarian" data-transition="none" >Hungarian<span class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="croatian" data-transition="none" >Croatian<span class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="english" data-transition="none" >English<span class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="german" data-transition="none" >German<span class="arrow"> > </span></a>
         </div>
     </div>
 
@@ -74,19 +74,19 @@
 
     <div data-role="main" class="ui-content">
         <div class="result">
-            <div class="contentBody_Serbian">
+            <div class="contentBody_serbian">
                 Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
             </div>
-            <div class="contentBody_Croatian">
+            <div class="contentBody_croatian">
                 Ovo rečenica je na hrvatskom. Samo da pogledam da sve je okej.
             </div>
-            <div class="contentBody_Hungarian">
+            <div class="contentBody_hungarian">
                 Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
             </div>
-            <div class="contentBody_German">
+            <div class="contentBody_german">
                 Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
             </div>
-            <div class="contentBody_English">
+            <div class="contentBody_english">
                 This sentence is in english. Just to be sure in case something is wrong.
             </div>
         </div>
@@ -104,11 +104,11 @@
         <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
         <a href="#" class="showLanguage color_next" data-transition="none" >Languages<span class="chooseLanguage">+</span></a>
         <ul class="allLanguage">
-            <li><a href="#" class="resetMenuAnimation color_next serbian"  data-transition="none">Serbian</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next hungarian"  data-transition="none">Hungarian</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next croatian"  data-transition="none">Croatian</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next english"  data-transition="none">English</a></li>
-            <li><a href="#" class="resetMenuAnimation color_next last_language german" data-transition="none">German</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="serbian" data-transition="none">Serbian</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="hungarian" data-transition="none">Hungarian</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="croatian" data-transition="none">Croatian</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="english" data-transition="none">English</a></li>
+            <li><a href="" class="resetMenuAnimation color_next last_language" data-name="german" data-transition="none">German</a></li>
         </ul>
         <a href="#" class="resetMenuAnimation color" data-transition="none" >About</a>
     </div>
@@ -118,15 +118,14 @@
             <span></span>
             <span></span>
         </div>
-        <h1>City Museum</h1>
+        <h1 class="contentTitle"></h1>
     </div>
 
     <div data-role="main" class="ui-content">
             <div class="result">
-                <div class="loader"><img src="images/loader.gif" alt="loader" /></div>
-                <div class="blackBackground"></div>
+
                 <!-- serbian menu -->
-                <div class="contentBody_Serbian">
+                <div class="contentBody_serbian">
                     <div class="tile green">
                         <h4 class="title"><a href="#mapPage">Map</a></h4>
                     </div>
@@ -152,7 +151,7 @@
                 </div>
 
                 <!-- croatian menu -->
-                <div class="contentBody_Croatian">
+                <div class="contentBody_croatian">
                     <div class="tile red">
                         <h4 class="title"><a href="#mapPage">Map</a></h4>
                     </div>
@@ -178,7 +177,7 @@
                 </div>
 
                 <!-- hungarian menu -->
-                <div class="contentBody_Hungarian">
+                <div class="contentBody_hungarian">
                     <div class="tile red">
                         <h4 class="title"><a href="#mapPage">Térkép</a></h4>
                     </div>
@@ -204,7 +203,7 @@
                 </div>
 
                 <!-- german menu -->
-                <div class="contentBody_German">
+                <div class="contentBody_german">
                     <div class="tile red">
                         <h4 class="title"><a href="#mapPage">Karte</a></h4>
                     </div>
@@ -230,7 +229,7 @@
                 </div>
 
                 <!-- english menu -->
-                <div class="contentBody_English">
+                <div class="contentBody_english">
                     <div class="tile red">
                         <h4 class="title"><a href="#mapPage">Map</a></h4>
                     </div>
@@ -260,7 +259,7 @@
     </div>
 
     <div data-role="footer" id="myPageFooter3" data-position="fixed">
-        <h1>Museum Subotica</h1>
+        <h1 class="contentFooter"></h1>
     </div>
 </div>
 <!-- End menu page -->

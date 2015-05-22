@@ -4,65 +4,60 @@
 var storeObject = {
     language:''
 };
-$(document).ready(function()
-{
-    $.ajaxSetup({
-        cache: false
-});
-});
+
 function changeContent(language) {
 
 
     switch (language) {
 
-        case "Serbian":
-            $("#contentTitle").html("Glavna Strana");
+        case "serbian":
+            $(".contentTitle").html("Gradski Muzej");
             $(".contentBody_"+language).show();
-            $(".contentBody_Hungarian").hide();
-            $(".contentBody_German").hide();
-            $(".contentBody_English").hide();
-            $(".contentBody_Croatian").hide();
-            $("#contentFooter").html("Dno strana");
+            $(".contentBody_hungarian").hide();
+            $(".contentBody_german").hide();
+            $(".contentBody_english").hide();
+            $(".contentBody_croatian").hide();
+            $(".contentFooter").html("Muzej Subotica");
             break;
 
-        case "Hungarian":
-            $("#contentTitle").html("Oldal teteje");
+        case "hungarian":
+            $(".contentTitle").html("Városi Múzeum");
             $(".contentBody_"+language).show();
-            $(".contentBody_Serbian").hide();
-            $(".contentBody_German").hide();
-            $(".contentBody_Croatian").hide();
-            $(".contentBody_English").hide();
-            $("#contentFooter").html("Oldal alja");
+            $(".contentBody_serbian").hide();
+            $(".contentBody_german").hide();
+            $(".contentBody_croatian").hide();
+            $(".contentBody_english").hide();
+            $(".contentFooter").html("Múzeum Szabadka");
             break;
 
-        case "German":
-            $("#contentTitle").html("Seitenkopf");
+        case "german":
+            $(".contentTitle").html("Stadt Museum");
             $(".contentBody_"+language).show();
-            $(".contentBody_Hungarian").hide();
-            $(".contentBody_Serbian").hide();
-            $(".contentBody_Croatian").hide();
-            $(".contentBody_English").hide();
-            $("#contentFooter").html("Fußleiste");
+            $(".contentBody_hungarian").hide();
+            $(".contentBody_serbian").hide();
+            $(".contentBody_croatian").hide();
+            $(".contentBody_english").hide();
+            $(".contentFooter").html("Museum Subotica");
             break;
 
-        case "English":
-            $("#contentTitle").html("Page header");
+        case "english":
+            $(".contentTitle").html("City Museum");
             $(".contentBody_"+language).show();
-            $(".contentBody_Hungarian").hide();
-            $(".contentBody_German").hide();
-            $(".contentBody_Serbian").hide();
-            $(".contentBody_Croatian").hide();
-            $("#contentFooter").html("Page footer");
+            $(".contentBody_hungarian").hide();
+            $(".contentBody_german").hide();
+            $(".contentBody_serbian").hide();
+            $(".contentBody_croatian").hide();
+            $(".contentFooter").html("Museum Subotica");
             break;
 
-        case "Croatian":
-            $("#contentTitle").html("Glavna Strana");
+        case "croatian":
+            $(".contentTitle").html("Gradski Muzej");
             $(".contentBody_"+language).show();
-            $(".contentBody_Hungarian").hide();
-            $(".contentBody_German").hide();
-            $(".contentBody_English").hide();
-            $(".contentBody_Serbian").hide();
-            $("#contentFooter").html("Dno strana");
+            $(".contentBody_hungarian").hide();
+            $(".contentBody_german").hide();
+            $(".contentBody_english").hide();
+            $(".contentBody_serbian").hide();
+            $(".contentFooter").html("Muzej Subotica");
             break;
 
     }
@@ -70,58 +65,18 @@ function changeContent(language) {
 
 
 
-$(document).on('pagebeforeshow', function(){
-    $(document).on('tap', '.english', function(){
-        // store some data
-        storeObject.language = 'English';
-        //Change page
-        $.mobile.changePage("#menuPage");
-    });    
-});
-
-$(document).on('pagebeforeshow', function(){
-    $(document).on('tap', '.hungarian', function(){
-        // store some data
-        storeObject.language = 'Hungarian';
-        //Change page
-        $.mobile.changePage("#menuPage");
-    });    
-});
-
-$(document).on('pagebeforeshow', function(){
-    $(document).on('tap', '.german', function(){
-        // store some data
-        storeObject.language = 'German';
-        //Change page
-        $.mobile.changePage("#menuPage");
-    });    
-});
-
-$(document).on('pagebeforeshow', function(){
-    $(document).on('tap', '.serbian', function(){
-        // store some data
-        storeObject.language = 'Serbian';
-        //Change page
-        $.mobile.changePage("#menuPage");
-    });    
+$(document).on("tap",".allLanguage li",function(event){
+   var name=$(event.target).closest("a").data("name");
+    $.session.remove("language");
+    $.session.set("language",name);
+    changeContent($.session.get("language"));
 });
 
 
-$(document).on('pagebeforeshow',function(){
-
-    $.session.set("language",storeObject.language);
-
+$(document).on("tap","#languages a",function(event){
+   var name=$(event.target).closest("a").data("name");
+    $.session.set("language",name);
+    changeContent($.session.get("language"));
 });
-
-
-
-$(document).on("pageshow",function(){
-   changeContent($.session.get("language"));
-
-});
-
-
-
-
 
 
