@@ -51,11 +51,19 @@ function menuAnimation(thisPage) {
             var touch = e.originalEvent.touches[ 0 ];
 // Check if the horizontal movement is bigger than the vertical movement.
             if( Math.abs( startLoc.x - touch.pageX ) >
-                Math.abs( startLoc.y - touch.pageY ) ) {
+                Math.abs( startLoc.y - touch.pageY ) &&
+                Math.abs(startLoc.x) < Math.abs(touch.pageX)) {
                 $('#overlayPanel' + thisPage).panel('open');
                 $('.navIconAnimation').addClass('open');
                 menuAnimation = true;
 // Prevent default, like scrolling.
+                e.preventDefault();
+            }else if( Math.abs( startLoc.x - touch.pageX ) >
+                Math.abs( startLoc.y - touch.pageY ) &&
+                Math.abs(startLoc.x) > Math.abs(touch.pageX)){
+                $('#overlayPanel' + thisPage).panel('close');
+                $('.navIconAnimation').removeClass('open');
+                menuAnimation = false;
                 e.preventDefault();
             }
             startLoc = null;
@@ -80,7 +88,6 @@ function menuAnimation(thisPage) {
             $(this).removeClass('openToggle');
             toggleOpen = false;
         }
-
     });
 
 }
@@ -89,6 +96,27 @@ function menuAnimation(thisPage) {
 $(document).on('pageshow', function () {
     var PageID = $.mobile.activePage.attr('id');
     menuAnimation(PageID);
+
+    var screen = $.mobile.getScreenHeight();
+
+
+    /* content div has padding of 1em = 16px (32px top+bottom). This step
+     can be skipped by subtracting 32px from content var directly. */
+    var contentCurrent = $(".ui-content").outerHeight() - $(".ui-content").height();
+    var content = screen - 42 - 42 - contentCurrent;
+
+    $(".ui-content").height(content);
+
+    var TileHeight = content/3;
+    var TextMargin = TileHeight/2-13;
+
+
+
+    $('.title').css('margin-top', TextMargin+'px');
+
+    $(".tile").height(TileHeight);
+
+
 });
 
 
