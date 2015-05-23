@@ -11,7 +11,7 @@ body{
     background-size:100% 100%;
 }
 
-#nav-icon1indexPage, #nav-icon1languagePage,#nav-icon1menuPage  {
+#nav-icon1indexPage, #nav-icon1languagePage,#nav-icon1menuPage,#nav-icon1infoPage,#nav-icon1aboutPage,#nav-icon1eventPage,#nav-icon1introPage,#nav-icon1guidePage,#nav-icon1mapPage  {
     width: 40px;
     height: 30px;
     position: absolute;
@@ -29,7 +29,7 @@ body{
     z-index: 9999;
 }
 
-#nav-icon1indexPage span, #nav-icon1languagePage span, #nav-icon1menuPage span {
+#nav-icon1indexPage span, #nav-icon1languagePage span, #nav-icon1menuPage span, #nav-icon1infoPage span,#nav-icon1aboutPage span,#nav-icon1eventPage span,#nav-icon1introPage span,#nav-icon1guidePage span,#nav-icon1mapPage span {
     display: block;
     position: absolute;
     height: 4px;
@@ -49,19 +49,19 @@ body{
     z-index: 9999;
 }
 
-#nav-icon1indexPage span:nth-child(1), #nav-icon1languagePage span:nth-child(1), #nav-icon1menuPage span:nth-child(1) {
+#nav-icon1indexPage span:nth-child(1), #nav-icon1languagePage span:nth-child(1), #nav-icon1menuPage span:nth-child(1),#nav-icon1infoPage span:nth-child(1),#nav-icon1aboutPage span:nth-child(1),#nav-icon1eventPage span:nth-child(1),#nav-icon1introPage span:nth-child(1),#nav-icon1guidePage span:nth-child(1),#nav-icon1mapPage span:nth-child(1) {
     top: 8px;
 }
 
-#nav-icon1indexPage span:nth-child(2), #nav-icon1languagePage span:nth-child(2), #nav-icon1menuPage span:nth-child(2)  {
+#nav-icon1indexPage span:nth-child(2), #nav-icon1languagePage span:nth-child(2), #nav-icon1menuPage span:nth-child(2),#nav-icon1infoPage span:nth-child(2),#nav-icon1aboutPage span:nth-child(2),#nav-icon1eventPage span:nth-child(2),#nav-icon1introPage span:nth-child(2),#nav-icon1guidePage span:nth-child(2),#nav-icon1mapPage span:nth-child(2)  {
     top: 16px;
 }
 
-#nav-icon1indexPage span:nth-child(3), #nav-icon1languagePage span:nth-child(3), #nav-icon1menuPage span:nth-child(3) {
+#nav-icon1indexPage span:nth-child(3), #nav-icon1languagePage span:nth-child(3), #nav-icon1menuPage span:nth-child(3),#nav-icon1infoPage span:nth-child(3),#nav-icon1aboutPage span:nth-child(3),#nav-icon1eventPage span:nth-child(3),#nav-icon1introPage span:nth-child(3),#nav-icon1guidePage span:nth-child(3),#nav-icon1mapPage span:nth-child(3) {
     top: 24px;
 }
 
-#nav-icon1indexPage.open span:nth-child(1), #nav-icon1languagePage.open span:nth-child(1), #nav-icon1menuPage.open span:nth-child(1) {
+#nav-icon1indexPage.open span:nth-child(1), #nav-icon1languagePage.open span:nth-child(1), #nav-icon1menuPage.open span:nth-child(1), #nav-icon1infoPage.open span:nth-child(1),#nav-icon1aboutPage.open span:nth-child(1),#nav-icon1eventPage.open span:nth-child(1),#nav-icon1introPage.open span:nth-child(1),#nav-icon1guidePage.open span:nth-child(1),#nav-icon1mapPage.open span:nth-child(1) {
     top: 18px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
@@ -69,12 +69,12 @@ body{
     transform: rotate(135deg);
 }
 
-#nav-icon1indexPage.open span:nth-child(2), #nav-icon1languagePage.open span:nth-child(2), #nav-icon1menuPage.open span:nth-child(2)  {
+#nav-icon1indexPage.open span:nth-child(2), #nav-icon1languagePage.open span:nth-child(2), #nav-icon1menuPage.open span:nth-child(2), #nav-icon1infoPage.open span:nth-child(2),#nav-icon1aboutPage.open span:nth-child(2),#nav-icon1eventPage.open span:nth-child(2),#nav-icon1introPage.open span:nth-child(2),#nav-icon1guidePage.open span:nth-child(2),#nav-icon1mapPage.open span:nth-child(2)  {
     opacity: 0;
     left: -60px;
 }
 
-#nav-icon1indexPage.open span:nth-child(3), #nav-icon1languagePage.open span:nth-child(3), #nav-icon1menuPage.open span:nth-child(3) {
+#nav-icon1indexPage.open span:nth-child(3), #nav-icon1languagePage.open span:nth-child(3), #nav-icon1menuPage.open span:nth-child(3), #nav-icon1infoPage.open span:nth-child(3),#nav-icon1aboutPage.open span:nth-child(3),#nav-icon1eventPage.open span:nth-child(3),#nav-icon1introPage.open span:nth-child(3),#nav-icon1guidePage.open span:nth-child(3),#nav-icon1mapPage.open span:nth-child(3) {
     top: 18px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
@@ -82,7 +82,7 @@ body{
     transform: rotate(-135deg);
 }
 
-#headerindexPage, #headerlanguagePage,#headermenuPage, #myPageFooter1, #myPageFooter2,#myPageFooter3{
+#headerindexPage, #headerlanguagePage,#headermenuPage,#headerinfoPage,#headeraboutPage,#headereventPage,#headerintroPage,#headerguidePage,#headermapPage, #myPageFooter1, #myPageFooter2,#myPageFooter3,#myPageFooter4,#myPageFooter5,#myPageFooter6,#myPageFooter7,#myPageFooter8,#myPageFooter9{
     background-color: rgb(76,101,121);
     color: #ffffff;
     text-shadow: 0 0 0 ;
@@ -205,4 +205,21 @@ a.languageButton:hover{
 
 .openToggle{
     background-color:  rgb(57,77,91);
+}
+
+
+.about-content{
+    background-color: rgb(57,77,91);
+    color:white;
+    padding:5px;
+    margin-top:0;
+}
+.about-content p{
+    text-align: justify;
+}
+
+.about-content img{
+    display:block;
+    margin:5px auto;
+    max-width: 100%;
 }

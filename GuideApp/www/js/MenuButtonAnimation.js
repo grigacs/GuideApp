@@ -117,6 +117,7 @@ $(document).on('pageshow', function () {
     $(".tile").height(TileHeight);
 
 
+
 });
 
 
