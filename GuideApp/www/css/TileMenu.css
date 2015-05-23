@@ -3,10 +3,12 @@
   width: 50%;
   display: inline-block;
   background: #fff;
-  padding: 15.9% 0;
+  opacity: 0.75;
+  /*padding: 17% 0;*/
     }
   .tile .title {
-    text-align: center; }
+    text-align: center;
+    }
     .tile .title a {
       text-decoration: none;
       color: white; }
@@ -37,4 +39,7 @@
     .tile.orange:hover {
       background: #b8431f; }
 
+#menuLanguageContent{
+
+}
 /*# sourceMappingURL=TileMenu.css.map */

@@ -2,6 +2,15 @@ body{
     background-color: #aaaaaa;
 }
 
+#menuPage.ui-page > .ui-content{
+    background: url(http://img0.gtsstatic.com/wallpapers/8068654eb6a1c9013342e1dcace78a84_large.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size:100% 100%;
+}
+
 #nav-icon1indexPage, #nav-icon1languagePage,#nav-icon1menuPage  {
     width: 40px;
     height: 30px;
@@ -85,12 +94,11 @@ a.resetMenuAnimation:link,a.resetMenuAnimation:visited,a.resetMenuAnimation:acti
 a.showLanguage:link,a.showLanguage:visited,a.showLanguage:active{
     display: inline-block;
     width: 91.21%;
-    padding: 5% 0 5% 5%;
     text-shadow: none;
     text-decoration: none;
     color: #ffffff;
-    overflow: hidden;
-    height: 40%;
+    margin: 0;
+    padding: 5% 2.5% 5% 2.5%;
 }
 
 a.resetMenuAnimation:hover{
@@ -107,7 +115,6 @@ a.resetMenuAnimation:hover{
 }
 
 a.languageButton:link,a.languageButton:visited,a.languageButton:active{
-
     width: 80%;
     text-decoration: none;
     text-shadow: none;
@@ -166,6 +173,8 @@ a.languageButton:hover{
 
 .color_next{
     border-left: 10px solid #67b168;
+    border-top:1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 .chooseLanguage{
@@ -181,14 +190,13 @@ a.languageButton:hover{
 
 .allLanguage{
     list-style-type: none;
-    margin:0 0 0 0;
+    margin: 0;
     overflow: hidden;
 }
 
 .allLanguage > li > a.resetMenuAnimation {
+    margin: 0;
     padding: 5% 1% 5% 3%;
-    margin: -2.2% 0 0 0;
-    border-bottom: 1px solid #ffffff;
 }
 
 .last_language{

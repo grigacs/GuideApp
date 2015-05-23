@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
@@ -8,7 +9,8 @@
     <link rel="stylesheet" href="css/TileMenu.css">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/ajaxDataLoader.js"></script>
+    <script src="js/forceChangePage.js"></script>
+    <!-- <script src="js/ajaxDataLoader.js"></script> -->
     <script src="js/LanguageSettings.js"></script>
     <script src="js/jquery.session.js"></script>
     <script src="js/MenuButtonAnimation.js"></script>
@@ -19,18 +21,26 @@
 <!-- Page One Start (Language Page) -->
 
 <div data-role="page" id="indexPage" data-position="fixed">
-    <div data-role="panel" id="overlayPanelindexPage"  data-display="overlay" data-position-fixed="true">
+    <div data-role="panel" id="overlayPanelindexPage" data-display="overlay" data-position-fixed="true">
 
-        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
-        <a href="#" class="showLanguage color_next" data-transition="none" >Languages<span class="chooseLanguage">+</span></a>
+        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
         <ul class="allLanguage">
-            <li><a href="" class="resetMenuAnimation color_next " data-name="serbian" data-transition="none">Serbian</a></li>
-            <li><a href="" class="resetMenuAnimation color_next " data-name="hungarian" data-transition="none">Hungarian</a></li>
-            <li><a href="" class="resetMenuAnimation color_next " data-name="croatian" data-transition="none">Croatian</a></li>
-            <li><a href="" class="resetMenuAnimation color_next " data-name="english" data-transition="none">English</a></li>
-            <li><a href="" class="resetMenuAnimation color_next last_language" data-name="german" data-transition="none">German</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
         </ul>
-        <a href="#" class="resetMenuAnimation color" data-transition="none" >About</a>
+        <a href="#" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
     </div>
     <div data-role="header" id="headerindexPage" data-position="fixed" data-tap-toggle="false">
         <div id="nav-icon1indexPage" class="navIconAnimation">
@@ -44,15 +54,20 @@
     <div data-role="main" class="ui-content">
         <div id="languages">
             <h1 class="languageText">Choose your language: </h1>
-            <a href="#menuPage" class="languageButton" data-name="serbian" data-transition="none" >Serbian<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton" data-name="hungarian" data-transition="none" >Hungarian<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton" data-name="croatian" data-transition="none" >Croatian<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton" data-name="english" data-transition="none" >English<span class="arrow"> > </span></a>
-            <a href="#menuPage" class="languageButton" data-name="german" data-transition="none" >German<span class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="serbian" data-transition="none">Serbian<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="hungarian" data-transition="none">Hungarian<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="croatian" data-transition="none">Croatian<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="english" data-transition="none">English<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="german" data-transition="none">German<span
+                    class="arrow"> > </span></a>
         </div>
     </div>
 
-    <div data-role="footer" id="myPageFooter1"  data-position="fixed" >
+    <div data-role="footer" id="myPageFooter1" data-position="fixed">
         <h1>Museum Subotica</h1>
     </div>
 </div>
@@ -63,8 +78,8 @@
 <!-- Start language Page -- >
 <div data-role="page" id="languagePage" data-position="fixed">
     <div data-role="panel" id="overlayPanellanguagePage" data-display="overlay">
-        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
-        <a href="#indexPage" class="resetMenuAnimation color_next" data-transition="none" >Languages</a> </div>
+        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none">Menu</a>
+        <a href="#indexPage" class="resetMenuAnimation color_next" data-transition="none">Languages</a></div>
     <div data-role="header" id="headerlanguagePage" data-position="fixed">
         <div id="nav-icon1languagePage" class="navIconAnimation">
             <span></span>
@@ -75,22 +90,20 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <div class="result">
-            <div class="contentBody_serbian">
-                Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
-            </div>
-            <div class="contentBody_croatian">
-                Ovo rečenica je na hrvatskom. Samo da pogledam da sve je okej.
-            </div>
-            <div class="contentBody_hungarian">
-                Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
-            </div>
-            <div class="contentBody_german">
-                Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
-            </div>
-            <div class="contentBody_english">
-                This sentence is in english. Just to be sure in case something is wrong.
-            </div>
+        <div class="contentBody_serbian">
+            Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
+        </div>
+        <div class="contentBody_croatian">
+            Ovo rečenica je na hrvatskom. Samo da pogledam da sve je okej.
+        </div>
+        <div class="contentBody_hungarian">
+            Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
+        </div>
+        <div class="contentBody_german">
+            Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
+        </div>
+        <div class="contentBody_english">
+            This sentence is in english. Just to be sure in case something is wrong.
         </div>
     </div>
 
@@ -101,18 +114,26 @@
 <!-- End language page -->
 <!-- Start menu Page -->
 <div data-role="page" id="menuPage" data-position="fixed">
-    <div data-role="panel" id="overlayPanelmenuPage"  data-display="overlay" data-position-fixed="true">
+    <div data-role="panel" id="overlayPanelmenuPage" data-display="overlay" data-position-fixed="true">
 
-        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none" >Menu</a>
-        <a href="#" class="showLanguage color_next" data-transition="none" >Languages<span class="chooseLanguage">+</span></a>
+        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
         <ul class="allLanguage">
-            <li><a href="" class="resetMenuAnimation color_next " data-name="serbian" data-transition="none">Serbian</a></li>
-            <li><a href="" class="resetMenuAnimation color_next " data-name="hungarian" data-transition="none">Hungarian</a></li>
-            <li><a href="" class="resetMenuAnimation color_next " data-name="croatian" data-transition="none">Croatian</a></li>
-            <li><a href="" class="resetMenuAnimation color_next " data-name="english" data-transition="none">English</a></li>
-            <li><a href="" class="resetMenuAnimation color_next last_language" data-name="german" data-transition="none">German</a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next " data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
         </ul>
-        <a href="#" class="resetMenuAnimation color" data-transition="none" >About</a>
+        <a href="#" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
     </div>
     <div data-role="header" id="headermenuPage" data-position="fixed" data-tap-toggle="false">
         <div id="nav-icon1menuPage" class="navIconAnimation">
@@ -124,143 +145,140 @@
     </div>
 
     <div data-role="main" class="ui-content">
-            <div class="result">
-
-                <!-- serbian menu -->
-                <div class="contentBody_serbian">
-                    <div class="tile green">
-                        <h4 class="title"><a href="#mapPage">Map</a></h4>
-                    </div>
-                    <div class="tile orange">
-                        <h4 class="title"><a href="#mapPage">Gajd</a></h4>
-                    </div>
-
-
-                    <div class="tile asphalt">
-                        <h4 class="title"><a href="#mapPage">Intro</a></h4>
-                    </div>
-                    <div class="tile blue">
-                        <h4 class="title"><a href="#mapPage">Igrica</a></h4>
-                    </div>
-
-
-                    <div class="tile red">
-                        <h4 class="title"><a href="#mapPage">dogadjaji</a></h4>
-                    </div>
-                    <div class="tile purple">
-                        <h4 class="title"><a href="#mapPage">Informacije</a></h4>
-                    </div>
+        <div id="menuLanguageContent">
+            <!-- serbian menu -->
+            <div class="contentBody_serbian">
+                <div class="tile green">
+                    <h4 class="title"><a href="#mapPage">Map</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#mapPage">Gajd</a></h4>
                 </div>
 
-                <!-- croatian menu -->
-                <div class="contentBody_croatian">
-                    <div class="tile red">
-                        <h4 class="title"><a href="#mapPage">Map</a></h4>
-                    </div>
-                    <div class="tile orange">
-                        <h4 class="title"><a href="#mapPage">Gajd</a></h4>
-                    </div>
 
-
-                    <div class="tile purple">
-                        <h4 class="title"><a href="#mapPage">Intro</a></h4>
-                    </div>
-                    <div class="tile blue">
-                        <h4 class="title"><a href="#mapPage">Igrica</a></h4>
-                    </div>
-
-
-                    <div class="tile green">
-                        <h4 class="title"><a href="#mapPage">dogadjaji</a></h4>
-                    </div>
-                    <div class="tile asphalt">
-                        <h4 class="title"><a href="#mapPage">Informacije</a></h4>
-                    </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#mapPage">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#mapPage">Igrica</a></h4>
                 </div>
 
-                <!-- hungarian menu -->
-                <div class="contentBody_hungarian">
-                    <div class="tile red">
-                        <h4 class="title"><a href="#mapPage">Térkép</a></h4>
-                    </div>
-                    <div class="tile orange">
-                        <h4 class="title"><a href="#mapPage">Vezetés</a></h4>
-                    </div>
 
-
-                    <div class="tile purple">
-                        <h4 class="title"><a href="#mapPage">Intro</a></h4>
-                    </div>
-                    <div class="tile blue">
-                        <h4 class="title"><a href="#mapPage">Játék</a></h4>
-                    </div>
-
-
-                    <div class="tile green">
-                        <h4 class="title"><a href="#mapPage">Események</a></h4>
-                    </div>
-                    <div class="tile asphalt">
-                        <h4 class="title"><a href="#mapPage">Információk</a></h4>
-                    </div>
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage">dogadjaji</a></h4>
                 </div>
-
-                <!-- german menu -->
-                <div class="contentBody_german">
-                    <div class="tile red">
-                        <h4 class="title"><a href="#mapPage">Karte</a></h4>
-                    </div>
-                    <div class="tile orange">
-                        <h4 class="title"><a href="#mapPage">Führung</a></h4>
-                    </div>
-
-
-                    <div class="tile purple">
-                        <h4 class="title"><a href="#mapPage">Intro</a></h4>
-                    </div>
-                    <div class="tile blue">
-                        <h4 class="title"><a href="#mapPage">Spiel</a></h4>
-                    </div>
-
-
-                    <div class="tile green">
-                        <h4 class="title"><a href="#mapPage">Geschehen</a></h4>
-                    </div>
-                    <div class="tile asphalt">
-                        <h4 class="title"><a href="#mapPage">Info</a></h4>
-                    </div>
-                </div>
-
-                <!-- english menu -->
-                <div class="contentBody_english">
-                    <div class="tile red">
-                        <h4 class="title"><a href="#mapPage">Map</a></h4>
-                    </div>
-                    <div class="tile orange">
-                        <h4 class="title"><a href="#mapPage">Guide</a></h4>
-                    </div>
-
-
-                    <div class="tile purple">
-                        <h4 class="title"><a href="#mapPage">Intro</a></h4>
-                    </div>
-                    <div class="tile blue">
-                        <h4 class="title"><a href="#mapPage">Game</a></h4>
-                    </div>
-
-
-                    <div class="tile green">
-                        <h4 class="title"><a href="#mapPage">Events</a></h4>
-                    </div>
-                    <div class="tile asphalt">
-                        <h4 class="title"><a href="#mapPage">Info</a></h4>
-                    </div>
-
+                <div class="tile purple">
+                    <h4 class="title"><a href="#mapPage">Informacije</a></h4>
                 </div>
             </div>
 
+            <!-- croatian menu -->
+            <div class="contentBody_croatian">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage">Map</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#mapPage">Gajd</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#mapPage">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#mapPage">Igrica</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#mapPage">dogadjaji</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#mapPage">Informacije</a></h4>
+                </div>
+            </div>
+
+            <!-- hungarian menu -->
+            <div class="contentBody_hungarian">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage">Térkép</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#mapPage">Vezetés</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#mapPage">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#mapPage">Játék</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#mapPage">Események</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#mapPage">Információk</a></h4>
+                </div>
+            </div>
+
+            <!-- german menu -->
+            <div class="contentBody_german">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage">Karte</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#mapPage">Führung</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#mapPage">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#mapPage">Spiel</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#mapPage">Geschehen</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#mapPage">Info</a></h4>
+                </div>
+            </div>
+
+            <!-- english menu -->
+            <div class="contentBody_english">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage">Map</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#mapPage">Guide</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#mapPage">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#mapPage">Game</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#mapPage">Events</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#mapPage">Info</a></h4>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div data-role="footer" id="myPageFooter3" data-position="fixed">
+    <div data-role="footer" id="myPageFooter3" data-position="fixed" data-tap-toggle="false">
         <h1 class="contentFooter"></h1>
     </div>
 </div>
