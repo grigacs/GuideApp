@@ -208,18 +208,45 @@ a.languageButton:hover{
 }
 
 
-.about-content{
+
+
+
+#aboutPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content, #eventPage.ui-page >.ui-content{
     background-color: rgb(57,77,91);
+    padding:10px;
     color:white;
-    padding:5px;
-    margin-top:0;
 }
-.about-content p{
+
+#aboutPage.ui-page > .ui-content p{
     text-align: justify;
 }
 
-.about-content img{
+#aboutPage.ui-page > .ui-content img{
     display:block;
     margin:5px auto;
     max-width: 100%;
+}
+
+#eventPage.ui-page > .ui-content{
+    text-shadow: none;
+}
+
+.main-title{
+    font-size:18px;
+    color:#FF6600;
+    text-shadow:#005599;
+    font-style: italic;
+    border-bottom:2px solid #31708f;
+    padding:5px;
+}
+
+.oneEvent p{
+    text-align: justify;
+    font-size:14px;
+    font-weight:500;
+}
+
+.texts{
+    padding:5px;
+    margin-bottom:10px;
 }
