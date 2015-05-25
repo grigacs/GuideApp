@@ -12,3 +12,18 @@ $(document).on('pagebeforeshow', '#indexPage', function(){
 
     }
 });
+
+
+
+$(document).on('pagebeforeshow', '#menuPage', function(event){
+    var changedLanguage = localStorage.getItem("changedLanguage");
+    if(changedLanguage =="yes"){
+        $.mobile.changePage("#eventPage", {
+            allowSamePageTransition: true,
+            transition: 'none',
+            showLoadMsg:true
+        });
+        localStorage.setItem("changedLanguage","no");
+    }
+
+});
