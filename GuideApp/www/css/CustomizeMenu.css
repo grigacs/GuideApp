@@ -211,7 +211,7 @@ a.languageButton:hover{
 
 
 
-#aboutPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content, #eventPage.ui-page >.ui-content{
+#aboutPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content, #eventPage.ui-page >.ui-content,#guidePage.ui-page > .ui-content, #introPage.ui-page > .ui-content, #mapPage.ui-page >.ui-content{
     background-color: rgb(57,77,91);
     padding:10px;
     color:white;
@@ -221,13 +221,13 @@ a.languageButton:hover{
     text-align: justify;
 }
 
-#aboutPage.ui-page > .ui-content img{
+#aboutPage.ui-page > .ui-content img ,{
     display:block;
     margin:5px auto;
     max-width: 100%;
 }
 
-#eventPage.ui-page > .ui-content{
+#eventPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content{
     text-shadow: none;
 }
 
@@ -249,4 +249,32 @@ a.languageButton:hover{
 .texts{
     padding:5px;
     margin-bottom:10px;
+}
+
+
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('http://i.stack.imgur.com/FhHRx.gif')
+    50% 50%
+    no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
 }
