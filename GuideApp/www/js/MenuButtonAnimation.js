@@ -74,9 +74,21 @@ function menuAnimation(thisPage) {
 
     $(document).off("tap", '.resetMenuAnimation').on("tap", '.resetMenuAnimation', function () {
         $('.navIconAnimation').removeClass('open');
+        menuAnimation = false;
+    });
+
+    $(document).off("tap", '.closeMenu').on("tap", '.closeMenu', function () {
+        $('.navIconAnimation').removeClass('open');
         $('#overlayPanel' + thisPage).panel('close');
         menuAnimation = false;
     });
+
+    $(document).off("tap", '.currentPage').on("tap", '.currentPage', function () {
+        $('.navIconAnimation').removeClass('open');
+        $('#overlayPanel' + thisPage).panel('close');
+        menuAnimation = false;
+    });
+
 
     $(document).off("tap",'.showLanguage').on("tap", '.showLanguage', function(e){
         e.preventDefault();
