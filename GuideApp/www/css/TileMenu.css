@@ -11,7 +11,8 @@
     }
     .tile .title a {
       text-decoration: none;
-      color: white; }
+      color: white;
+    }
   .tile.purple, .tile.blue, .tile.red, .tile.orange, .tile.green, .tile.asphalt {
     color: #fff; }
   .tile.purple {
