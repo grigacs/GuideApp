@@ -9,13 +9,11 @@
     <link rel="stylesheet" href="css/TileMenu.css">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="js/forceChangePage.js"></script>
     <script src="js/LanguageSettings.js"></script>
+    <script src="js/GetEvents.js"></script>
+    <script src="js/forceChangePage.js"></script>
     <script src="js/jquery.session.js"></script>
     <script src="js/MenuButtonAnimation.js"></script>
-    <script src="js/GetEvents.js"></script>
-    <script src="js/jquery.cookies.js"></script>
-    <script src="js/GetInformation.js"></script>
 </head>
 <body>
 
@@ -294,9 +292,7 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <div class="info-content">
 
-        </div>
     </div>
 
     <div data-role="footer" id="myPageFooter4" data-position="fixed" data-tap-toggle="false">
@@ -407,6 +403,9 @@
         </div>
         <h1 class="contentTitle"></h1>
     </div>
+    <div class="loading_image">
+        <img src="images/loader.gif" alt="loading" />
+    </div>
     <div data-role="main" class="ui-content">
         <div class="event-content">
 
@@ -455,11 +454,12 @@
         <h1 class="contentTitle"></h1>
     </div>
     <div data-role="main" class="ui-content">
+        <div class="loading_image">
+            <img src="images/loader.gif" alt="loading" />
+        </div>
+        <div class="intro">
 
-            <div class="intro">
-
-            </div>
-
+        </div>
     </div>
     <div data-role="footer" id="myPageFooter7" data-position="fixed" data-tap-toggle="false">
         <h1 class="contentFooter"></h1>
@@ -557,6 +557,6 @@
 
 
 <!-- End map page -->
-<div class="modal"></div>
+
 </body>
 </html>

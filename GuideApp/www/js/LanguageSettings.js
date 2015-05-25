@@ -7,8 +7,6 @@ var storeObject = {
 
 function changeContent(language) {
 
-    if(language=="" || language==undefined)
-    language=localStorage.getItem(Mylanguage);
 
     switch (language) {
 
@@ -119,8 +117,8 @@ $(document).on('pageinit', '#menuPage',function() {
         $.session.set("language", name);
         localStorage.setItem("Mylanguage", name);
         changeContent($.session.get("language"));
-        getEvents("change");
-
+        needRefresh = true;
+        getDataFromJson();
     });
 
 
@@ -130,4 +128,5 @@ $(document).on('pageinit', '#menuPage',function() {
         localStorage.setItem("Mylanguage", name);
         changeContent($.session.get("language"));
     });
+
 
