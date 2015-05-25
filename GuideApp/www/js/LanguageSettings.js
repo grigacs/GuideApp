@@ -119,7 +119,7 @@ $(document).on('pageinit', '#menuPage',function() {
         $.session.set("language", name);
         localStorage.setItem("Mylanguage", name);
         changeContent($.session.get("language"));
-        getEvents("change");
+        
 
     });
 
