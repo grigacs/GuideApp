@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GetEvents.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GetEvents.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/GetEvents.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25505617" vertical-offset="606" max-vertical-offset="1496">
+            <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="1496">
               <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
@@ -92,21 +92,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomizeMenu.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomizeMenu.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/CustomizeMenu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1949" max-vertical-offset="4386">
-              <caret line="140" column="1" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-              <folding>
-                <marker date="1432487799643" expanded="true" signature="431:957" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="1038:1650" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="1770:2012" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="2133:2376" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="2496:2739" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="3851:4269" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="4371:4681" placeholder="{...}" />
-                <marker date="1432487799643" expanded="true" signature="7297:7616" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0764045" vertical-offset="0" max-vertical-offset="4386">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,13 +150,13 @@
         <option value="$PROJECT_DIR$/js/ajaxDataLoader.js" />
         <option value="$PROJECT_DIR$/js/addBackground.js" />
         <option value="$PROJECT_DIR$/js/forceChangePage.js" />
-        <option value="$PROJECT_DIR$/css/CustomizeMenu.css" />
         <option value="$PROJECT_DIR$/js/LanguageSettings.js" />
         <option value="$PROJECT_DIR$/js/MenuButtonAnimation.js" />
         <option value="$PROJECT_DIR$/css/TileMenu.css" />
         <option value="C:/wamp/www/museum_server/index.php" />
         <option value="$PROJECT_DIR$/js/GetEvents.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/CustomizeMenu.css" />
       </list>
     </option>
   </component>
@@ -316,6 +307,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phonegap\GuideApp\GuideApp\www\images" />
       <recent name="D:\phonegap\GuideApp\GuideApp\www\js" />
       <recent name="D:\phonegap\GuideApp\GuideApp\www" />
       <recent name="D:\phonegap\www\images" />
@@ -453,16 +445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="542" max-vertical-offset="1445">
           <caret line="43" column="14" selection-start-line="42" selection-start-column="30" selection-end-line="43" selection-end-column="14" />
-          <folding>
-            <marker date="1432487799643" expanded="true" signature="431:957" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="1038:1650" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="1770:2012" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="2133:2376" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="2496:2739" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="3851:4269" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="4371:4681" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="7297:7616" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -514,16 +497,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="1445">
           <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding>
-            <marker date="1432487799643" expanded="true" signature="431:957" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="1038:1650" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="1770:2012" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="2133:2376" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="2496:2739" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="3851:4269" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="4371:4681" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="7297:7616" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -667,23 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/CustomizeMenu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1949" max-vertical-offset="4386">
-          <caret line="140" column="1" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-          <folding>
-            <marker date="1432487799643" expanded="true" signature="431:957" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="1038:1650" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="1770:2012" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="2133:2376" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="2496:2739" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="3851:4269" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="4371:4681" placeholder="{...}" />
-            <marker date="1432487799643" expanded="true" signature="7297:7616" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/forceChangePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -751,8 +708,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/GetEvents.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25505617" vertical-offset="606" max-vertical-offset="1496">
+        <state vertical-scroll-proportion="0.0" vertical-offset="606" max-vertical-offset="1496">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/CustomizeMenu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0764045" vertical-offset="0" max-vertical-offset="4386">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding />
         </state>
       </provider>

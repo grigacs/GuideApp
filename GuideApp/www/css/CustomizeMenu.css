@@ -3,7 +3,7 @@ body{
 }
 
 #menuPage.ui-page > .ui-content{
-    background: url(http://img0.gtsstatic.com/wallpapers/8068654eb6a1c9013342e1dcace78a84_large.png) no-repeat center center fixed;
+    background: url("../images/tile_background.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
