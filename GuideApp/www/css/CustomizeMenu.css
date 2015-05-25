@@ -226,7 +226,7 @@ a.languageButton:hover{
 
 
 
-#aboutPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content, #eventPage.ui-page >.ui-content{
+#aboutPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content, #eventPage.ui-page >.ui-content,#guidePage.ui-page > .ui-content, #introPage.ui-page > .ui-content, #mapPage.ui-page >.ui-content{
     background-color: rgb(57,77,91);
     padding:10px;
     color:white;
@@ -242,7 +242,7 @@ a.languageButton:hover{
     max-width: 100%;
 }
 
-#eventPage.ui-page > .ui-content{
+#eventPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content{
     text-shadow: none;
 }
 
