@@ -7,8 +7,6 @@ var storeObject = {
 
 function changeContent(language) {
 
-    if(language=="" || language==undefined)
-    language=localStorage.getItem(Mylanguage);
 
     switch (language) {
 
@@ -113,21 +111,22 @@ $(document).on('pageinit', '#menuPage',function() {
     }
 });
 
-    $(document).on("tap", ".allLanguage li", function (event) {
-        var name = $(event.target).closest("a").data("name");
-        $.session.remove("language");
-        $.session.set("language", name);
-        localStorage.setItem("Mylanguage", name);
-        changeContent($.session.get("language"));
+$(document).on("tap", ".allLanguage li", function (event) {
+    var name = $(event.target).closest("a").data("name");
+    $.session.remove("language");
+    $.session.set("language", name);
+    localStorage.setItem("Mylanguage", name);
+    changeContent($.session.get("language"));
+    needRefresh = true;
+    getDataFromJson();
+    getMapInformation();
+    getInformation();
+});
 
 
-    });
-
-
-    $(document).on("tap", "#languages a", function (event) {
-        var name = $(event.target).closest("a").data("name");
-        $.session.set("language", name);
-        localStorage.setItem("Mylanguage", name);
-        changeContent($.session.get("language"));
-    });
-
+$(document).on("tap", "#languages a", function (event) {
+    var name = $(event.target).closest("a").data("name");
+    $.session.set("language", name);
+    localStorage.setItem("Mylanguage", name);
+    changeContent($.session.get("language"));
+});

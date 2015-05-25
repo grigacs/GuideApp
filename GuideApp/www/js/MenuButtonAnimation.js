@@ -25,17 +25,6 @@ function menuAnimation(thisPage) {
         toggleOpen = false;
     });
 
-    /*$(window).off("swiperight").on("swiperight", function () {
-        $('#overlayPanel' + thisPage).panel('open');
-        $('.navIconAnimation').addClass('open');
-        menuAnimation = true;
-    });
-
-    $(window).off("swipeleft").on("swipeleft", function () {
-        $('#overlayPanel' + thisPage).panel('close');
-        $('.navIconAnimation').removeClass('open');
-        menuAnimation = false;
-    });*/
 
     $( "body" ).off("touchstart").on( "touchstart", function( e ) {
         if( e.originalEvent.touches.length == 1 ) { // one finger touch

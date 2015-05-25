@@ -11,6 +11,30 @@ body{
     background-size:100% 100%;
 }
 
+
+
+
+.loading_image{
+    position: fixed;
+    display:block;
+    width:10px;
+    height:10px;
+    margin-top:35%;
+    margin-left:30%;
+
+}
+
+.intro{
+    display: none;
+    width: 100%;
+    margin:20px 3.8%;
+}
+
+.map-content pre{
+    font-family: Verdana,Arial;
+    font-size:16px;
+}
+
 #nav-icon1indexPage, #nav-icon1languagePage,#nav-icon1menuPage,#nav-icon1infoPage,#nav-icon1aboutPage,#nav-icon1eventPage,#nav-icon1introPage,#nav-icon1guidePage,#nav-icon1mapPage  {
     width: 40px;
     height: 30px;
@@ -221,11 +245,12 @@ a.languageButton:hover{
     text-align: justify;
 }
 
-#aboutPage.ui-page > .ui-content img ,{
+#aboutPage.ui-page > .ui-content img,#mapPage.ui-page > .ui-content img{
     display:block;
     margin:5px auto;
     max-width: 100%;
 }
+
 
 #eventPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content{
     text-shadow: none;
@@ -252,29 +277,10 @@ a.languageButton:hover{
 }
 
 
-
-.modal {
-    display:    none;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 )
-    url('http://i.stack.imgur.com/FhHRx.gif')
-    50% 50%
-    no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-    display: block;
+video {
+    background:transparent url('../images/video_poster.jpg') no-repeat 0 0;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
 }
