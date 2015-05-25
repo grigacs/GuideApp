@@ -38,7 +38,7 @@
 
 
 document.addEventListener("backbutton", function() {
-    if ( $('.ui-page-active').attr('id') == 'menuPage' || $('.ui-page-active').attr('id') == 'indexPage') {
+    if ( $.mobile.activePage.attr('id') == 'menuPage' || $.mobile.activePage.attr('id') == 'indexPage') {
         exitAppPopup();
     } else {
         history.back();
