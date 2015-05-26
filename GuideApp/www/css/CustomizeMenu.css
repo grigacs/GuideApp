@@ -3,6 +3,7 @@ body{
 }
 
 #menuPage.ui-page > .ui-content{
+    display: none;
     background: url("../images/tile_background.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

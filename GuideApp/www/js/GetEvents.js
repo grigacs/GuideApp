@@ -5,7 +5,6 @@ var info_titles=[];
 var info_contents=[];
 var kontakt_titles=[];
 var kontakt_contents=[];
-var intro, picture;
 
 function getDataFromJson() {
     $('.loading_image').show();
@@ -24,7 +23,7 @@ function getDataFromJson() {
 
     }
 
-    $.getJSON("http://192.168.0.3/museum_server/index.php?language=" + lang).done(function (result) {
+    $.getJSON("http://192.168.1.5/museum_server/index.php?language=" + lang).done(function (result) {
         $.each(result, function (i, data) {
             // all data is Object (result[Object object])
 
@@ -110,7 +109,7 @@ function getMapInformation() {
 
     }
 
-    $.getJSON("http://192.168.0.3/museum_server/index.php?language=" + lang).done(function (result) {
+    $.getJSON("http://192.168.1.5/museum_server/index.php?language=" + lang).done(function (result) {
         $.each(result, function (i, data) {
             // all data is Object (result[Object object])
             console.log(result);
@@ -149,7 +148,7 @@ function getInformation() {
 
     }
 
-    $.getJSON("http://192.168.0.3/museum_server/index.php?language=" + lang).done(function (result) {
+    $.getJSON("http://192.168.1.5/museum_server/index.php?language=" + lang).done(function (result) {
         $.each(result, function (i, data) {
             // all data is Object (result[Object object])
 
