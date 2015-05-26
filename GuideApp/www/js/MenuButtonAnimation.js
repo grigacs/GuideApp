@@ -102,7 +102,7 @@ $(document).on('pageshow', function () {
 });
 
 
-var screen = $.mobile.getScreenHeight();
+
 
 $(document).on('pagebeforeshow', "#menuPage", function (){
 
@@ -110,6 +110,8 @@ $(document).on('pagebeforeshow', "#menuPage", function (){
         $("#menuPage .ui-content").show();
         $(".loading_image").hide();
     }, 500);
+
+    var screen = $.mobile.getScreenHeight();
 
    /* content div has padding of 1em = 16px (32px top+bottom). This step
      can be skipped by subtracting 32px from content var directly*/
