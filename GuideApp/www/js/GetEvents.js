@@ -94,38 +94,6 @@ function listInformation() {
 
 
 
-
-function getIntro(pageName) {
-
-    $.getJSON("http://192.168.0.3/museum_server/index.php?pageName=" + pageName).done( function (result) {
-        $.each(result, function (i, data) {
-            // all data is Object (result[Object object])
-            console.log(data);
-            for (var j = 0; j < data.length; j++) {
-
-                intro = data[j]['intro'];
-                picture = data[j]['picture'];
-                var address = "http://192.168.0.3/museum_server/videos/" + intro;
-                var pictureAddress = "http://192.168.0.3/museum_server/images/" + picture;
-
-                var screenHeight = $('.ui-content').innerHeight();
-                var screenWidth = $('body').innerWidth();
-
-                screenHeight = screenHeight/2.5;
-                screenWidth = screenWidth/1.1;
-
-
-                $('.loading_image').hide();
-                $('.intro').show();
-                $('.intro').html('<video width="'+ screenWidth + '" height="'+ screenHeight  +'" controls poster="'+ pictureAddress + '"><source src="' + address + '" type="video/mp4"> Your browser does not support the video tag.</video>');
-            }
-        });
-
-    });
-}
-
-
-
 function getMapInformation() {
     $('.loading_image').show();
     lists=[];
@@ -229,7 +197,5 @@ $(document).off('pageshow', '#infoPage').on('pageshow', '#infoPage', function ()
     getInformation();
 });
 
-$(document).on('pagecreate', '#introPage', function () {
-    getIntro('#introPage');
-});
+
 

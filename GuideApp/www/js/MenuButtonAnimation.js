@@ -98,11 +98,21 @@ $(document).on('pageshow', function () {
     var PageID = $.mobile.activePage.attr('id');
     menuAnimation(PageID);
 
-    var screen = $.mobile.getScreenHeight();
+
+});
 
 
-    /* content div has padding of 1em = 16px (32px top+bottom). This step
-     can be skipped by subtracting 32px from content var directly. */
+var screen = $.mobile.getScreenHeight();
+
+$(document).on('pagebeforeshow', "#menuPage", function (){
+
+    setTimeout(function() {
+        $("#menuPage .ui-content").show();
+        $(".loading_image").hide();
+    }, 500);
+
+   /* content div has padding of 1em = 16px (32px top+bottom). This step
+     can be skipped by subtracting 32px from content var directly*/
     var contentCurrent = $(".ui-content").outerHeight() - $(".ui-content").height();
     var content = screen - 42 - 42 - contentCurrent;
 
@@ -120,8 +130,4 @@ $(document).on('pageshow', function () {
 
 
 });
-
-
-
-
 

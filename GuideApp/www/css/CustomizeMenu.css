@@ -13,26 +13,15 @@ body{
 
 
 
-
 .loading_image{
+    z-index: 1000;
     position: fixed;
-    display:block;
-    width:10px;
-    height:10px;
-    margin-top:35%;
-    margin-left:30%;
-
+    top: 45%;
+    left: 40%;
 }
 
 .intro{
     display: none;
-    width: 100%;
-    margin:20px 3.8%;
-}
-
-.map-content pre{
-    font-family: Verdana,Arial;
-    font-size:16px;
 }
 
 #nav-icon1indexPage, #nav-icon1languagePage,#nav-icon1menuPage,#nav-icon1infoPage,#nav-icon1aboutPage,#nav-icon1eventPage,#nav-icon1introPage,#nav-icon1guidePage,#nav-icon1mapPage  {
@@ -245,12 +234,11 @@ a.languageButton:hover{
     text-align: justify;
 }
 
-#aboutPage.ui-page > .ui-content img,#mapPage.ui-page > .ui-content img{
+#aboutPage.ui-page > .ui-content img{
     display:block;
     margin:5px auto;
     max-width: 100%;
 }
-
 
 #eventPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content{
     text-shadow: none;
@@ -277,10 +265,3 @@ a.languageButton:hover{
 }
 
 
-video {
-    background:transparent url('../images/video_poster.jpg') no-repeat 0 0;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-}
