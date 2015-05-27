@@ -23,7 +23,7 @@ function getDataFromJson() {
 
     }
 
-    $.getJSON("http://192.168.0.7/museum_server/index.php?language=" + lang).done(function (result) {
+    $.getJSON("http://192.168.1.5/museum_server/index.php?language=" + lang).done(function (result) {
         $.each(result, function (i, data) {
             // all data is Object (result[Object object])
 
@@ -148,7 +148,7 @@ function getMapInformation() {
 
     }
 
-    $.getJSON("http://192.168.0.7/museum_server/index.php?language=" + lang).done(function (result) {
+    $.getJSON("http://192.168.1.5/museum_server/index.php?language=" + lang).done(function (result) {
         $.each(result, function (i, data) {
             // all data is Object (result[Object object])
             console.log(result);
@@ -187,7 +187,7 @@ function getInformation() {
 
     }
 
-    $.getJSON("http://192.168.0.7/museum_server/index.php?language=" + lang).done(function (result) {
+    $.getJSON("http://192.168.1.5/museum_server/index.php?language=" + lang).done(function (result) {
         $.each(result, function (i, data) {
             // all data is Object (result[Object object])
 

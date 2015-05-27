@@ -6,7 +6,7 @@ function openApiBrowser() {
 
     $('.introLink').on("tap", function (e) {
         e.preventDefault();
-        var ref = window.open('http://192.168.0.7/museum_server/embed_video.html', '_blank');
+        var ref = window.open('http://192.168.1.5/museum_server/embed_video.html', '_blank');
         ref.addEventListener('loadstart', function () {
             alert('start: ' + event.url);
         });
