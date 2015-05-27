@@ -1,0 +1,294 @@
+body{
+    background-color: #aaaaaa;
+}
+
+#menuPage.ui-page > .ui-content{
+    display: none;
+    background: url("../images/tile_background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size:100% 100%;
+}
+
+#eventPage.ui-page > .ui-content .oneEvent{
+    display:none;
+}
+
+.loading_image{
+    z-index: 1000;
+    position: fixed;
+    top: 45%;
+    left: 40%;
+}
+
+.map-content pre{
+    font-family: Verdana,Arial;
+    font-size:16px;
+}
+
+
+.load-content{
+    background-color: #005599;
+    color:white;
+    max-width: 100%;
+    text-align: center;
+    padding:20px 10px;
+    font-weight: 600;
+    display:none;
+}
+
+.load-content:hover{
+    color:#e2e2e2;
+}
+
+.intro{
+    display: none;
+}
+
+#nav-icon1indexPage, #nav-icon1languagePage,#nav-icon1menuPage,#nav-icon1infoPage,#nav-icon1aboutPage,#nav-icon1eventPage,#nav-icon1introPage,#nav-icon1guidePage,#nav-icon1mapPage  {
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top:2px;
+    left:5px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#nav-icon1indexPage span, #nav-icon1languagePage span, #nav-icon1menuPage span, #nav-icon1infoPage span,#nav-icon1aboutPage span,#nav-icon1eventPage span,#nav-icon1introPage span,#nav-icon1guidePage span,#nav-icon1mapPage span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 70%;
+    background: #ffffff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 10px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    z-index: 9999;
+}
+
+#nav-icon1indexPage span:nth-child(1), #nav-icon1languagePage span:nth-child(1), #nav-icon1menuPage span:nth-child(1),#nav-icon1infoPage span:nth-child(1),#nav-icon1aboutPage span:nth-child(1),#nav-icon1eventPage span:nth-child(1),#nav-icon1introPage span:nth-child(1),#nav-icon1guidePage span:nth-child(1),#nav-icon1mapPage span:nth-child(1) {
+    top: 8px;
+}
+
+#nav-icon1indexPage span:nth-child(2), #nav-icon1languagePage span:nth-child(2), #nav-icon1menuPage span:nth-child(2),#nav-icon1infoPage span:nth-child(2),#nav-icon1aboutPage span:nth-child(2),#nav-icon1eventPage span:nth-child(2),#nav-icon1introPage span:nth-child(2),#nav-icon1guidePage span:nth-child(2),#nav-icon1mapPage span:nth-child(2)  {
+    top: 16px;
+}
+
+#nav-icon1indexPage span:nth-child(3), #nav-icon1languagePage span:nth-child(3), #nav-icon1menuPage span:nth-child(3),#nav-icon1infoPage span:nth-child(3),#nav-icon1aboutPage span:nth-child(3),#nav-icon1eventPage span:nth-child(3),#nav-icon1introPage span:nth-child(3),#nav-icon1guidePage span:nth-child(3),#nav-icon1mapPage span:nth-child(3) {
+    top: 24px;
+}
+
+#nav-icon1indexPage.open span:nth-child(1), #nav-icon1languagePage.open span:nth-child(1), #nav-icon1menuPage.open span:nth-child(1), #nav-icon1infoPage.open span:nth-child(1),#nav-icon1aboutPage.open span:nth-child(1),#nav-icon1eventPage.open span:nth-child(1),#nav-icon1introPage.open span:nth-child(1),#nav-icon1guidePage.open span:nth-child(1),#nav-icon1mapPage.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1indexPage.open span:nth-child(2), #nav-icon1languagePage.open span:nth-child(2), #nav-icon1menuPage.open span:nth-child(2), #nav-icon1infoPage.open span:nth-child(2),#nav-icon1aboutPage.open span:nth-child(2),#nav-icon1eventPage.open span:nth-child(2),#nav-icon1introPage.open span:nth-child(2),#nav-icon1guidePage.open span:nth-child(2),#nav-icon1mapPage.open span:nth-child(2)  {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon1indexPage.open span:nth-child(3), #nav-icon1languagePage.open span:nth-child(3), #nav-icon1menuPage.open span:nth-child(3), #nav-icon1infoPage.open span:nth-child(3),#nav-icon1aboutPage.open span:nth-child(3),#nav-icon1eventPage.open span:nth-child(3),#nav-icon1introPage.open span:nth-child(3),#nav-icon1guidePage.open span:nth-child(3),#nav-icon1mapPage.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#headerindexPage, #headerlanguagePage,#headermenuPage,#headerinfoPage,#headeraboutPage,#headereventPage,#headerintroPage,#headerguidePage,#headermapPage, #myPageFooter1, #myPageFooter2,#myPageFooter3,#myPageFooter4,#myPageFooter5,#myPageFooter6,#myPageFooter7,#myPageFooter8,#myPageFooter9{
+    background-color: rgb(76,101,121);
+    color: #ffffff;
+    text-shadow: 0 0 0 ;
+    z-index: 1001;
+    border: 0;
+}
+
+a.resetMenuAnimation:link,a.resetMenuAnimation:visited,a.resetMenuAnimation:active,
+a.showLanguage:link,a.showLanguage:visited,a.showLanguage:active{
+    display: inline-block;
+    width: 91.21%;
+    text-shadow: none;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0;
+    padding: 5% 2.5% 5% 2.5%;
+}
+
+a.resetMenuAnimation:hover{
+   background-color:  rgb(57,77,91)
+}
+
+.languageText {
+    color: rgb(57,77,91);
+    font-family: 'Trocchi', serif;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 3% 0 3% 5%;
+}
+
+a.languageButton:link,a.languageButton:visited,a.languageButton:active{
+    width: 80%;
+    text-decoration: none;
+    text-shadow: none;
+    text-align: center;
+    color: #ffffff;
+    background: #C47451;
+    display: block;
+    text-transform: uppercase;
+    margin: 25px auto;
+    padding: 0 25px;
+    line-height: 56px;
+    letter-spacing: .1em;
+    position: relative;
+    border-radius: 5px;
+    -webkit-box-shadow: -10px 10px 67px -13px rgba(0,0,0,0.5);
+    -moz-box-shadow: -10px 10px 67px -13px rgba(0,0,0,0.5);
+    box-shadow: -10px 10px 67px -13px rgba(0,0,0,0.5);
+    transition: background-color 0.7s ease;
+
+}
+
+a.languageButton:hover{
+    background-color:  #67b168;
+}
+
+.arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    text-align: center;
+    background: rgb(57, 77, 91);
+    color: white;
+    font-size: 2.5em;
+    width: 15%;
+    float: right;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-box-shadow: -10px 10px 67px -13px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: -10px 10px 67px -13px rgba(0, 0, 0, 0.5);
+    box-shadow: -10px 10px 67px -13px rgba(0, 0, 0, 0.5);
+    transition: color 0.7s ease;
+}
+
+.arrow:hover{
+    color:  #67b168;
+}
+
+.color{
+    border-top:1px solid #ffffff;
+    border-left: 10px solid #f26b43;
+    border-bottom: 1px solid #ffffff;
+}
+
+
+.color_next{
+    border-left: 10px solid #67b168;
+    border-top:1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.chooseLanguage{
+    float: right;
+    margin-right: 10%;
+    font-size: 15px;
+}
+
+.allLanguage{
+    display: none;
+}
+
+
+.allLanguage{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+.allLanguage > li > a.resetMenuAnimation {
+    margin: 0;
+    padding: 5% 1% 5% 3%;
+}
+
+.last_language{
+    border-bottom: 0;
+}
+
+.openToggle{
+    background-color:  rgb(57,77,91);
+}
+
+
+
+
+
+#aboutPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content, #eventPage.ui-page >.ui-content,#guidePage.ui-page > .ui-content, #introPage.ui-page > .ui-content, #mapPage.ui-page >.ui-content{
+    background-color: rgb(57,77,91);
+    padding:10px;
+    color:white;
+}
+
+#aboutPage.ui-page > .ui-content p{
+    text-align: justify;
+}
+
+#aboutPage.ui-page > .ui-content img{
+    display:block;
+    margin:5px auto;
+    max-width: 100%;
+}
+
+#eventPage.ui-page > .ui-content, #infoPage.ui-page > .ui-content{
+    text-shadow: none;
+}
+
+#mapPage.ui-page > .ui-content img{
+    max-width: 100%;
+}
+
+.main-title{
+    font-size:18px;
+    color:#FF6600;
+    text-shadow:#005599;
+    font-style: italic;
+    border-bottom:2px solid #31708f;
+    padding:5px;
+}
+
+.oneEvent p{
+    text-align: justify;
+    font-size:14px;
+    font-weight:500;
+}
+
+.texts{
+    padding:5px;
+    margin-bottom:10px;
+}
+
+

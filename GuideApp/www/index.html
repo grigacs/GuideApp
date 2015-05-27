@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/CustomizeMenu.css">
+    <link rel="stylesheet" href="css/TileMenu.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/LanguageSettings.js"></script>
+    <script src="js/GetEvents.js"></script>
+    <script src="js/forceChangePage.js"></script>
+    <script src="js/jquery.session.js"></script>
+    <script src="js/MenuButtonAnimation.js"></script>
+    <script src="js/jquery.cookies.js"></script>
+    <script src="js/InAppBrowserApi.js"></script>
+    <script src="js/ChangeEventContent.js"></script>
+</head>
+<body>
+
+<!-- Page One Start (Language Page) -->
+
+<div data-role="page" id="indexPage" data-position="fixed">
+    <div data-role="header" id="headerindexPage" data-position="fixed" data-tap-toggle="false">
+        <h1>City Museum</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div id="languages">
+            <h1 class="languageText">Choose your language: </h1>
+            <a href="#menuPage" class="languageButton" data-name="serbian" data-transition="none">Serbian<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="hungarian" data-transition="none">Hungarian<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="croatian" data-transition="none">Croatian<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="english" data-transition="none">English<span
+                    class="arrow"> > </span></a>
+            <a href="#menuPage" class="languageButton" data-name="german" data-transition="none">German<span
+                    class="arrow"> > </span></a>
+        </div>
+    </div>
+
+    <div data-role="footer" id="myPageFooter1" data-position="fixed">
+        <h1>Museum Subotica</h1>
+    </div>
+</div>
+
+
+<!-- Page One End (Language Page end) -->
+
+<!-- Start language Page -- >
+<!--<div data-role="page" id="languagePage" data-position="fixed">
+    <div data-role="panel" id="overlayPanellanguagePage" data-display="overlay">
+        <a href="#languagePage" class="resetMenuAnimation color" data-transition="none">Menu</a>
+        <a href="#indexPage" class="resetMenuAnimation color_next" data-transition="none">Languages</a></div>
+    <div data-role="header" id="headerlanguagePage" data-position="fixed">
+        <div id="nav-icon1languagePage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 id="contentTitle"></h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div class="contentBody_serbian">
+            Ovo rečenica je na srpskom. Samo da pogledam da sve je okej.
+        </div>
+        <div class="contentBody_croatian">
+            Ovo rečenica je na hrvatskom. Samo da pogledam da sve je okej.
+        </div>
+        <div class="contentBody_hungarian">
+            Ez a mondat magyarul van. Csak azért hogy lássam, hogy minden működik.
+        </div>
+        <div class="contentBody_german">
+            Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen. Ich werde den Müll wegwerfen.
+        </div>
+        <div class="contentBody_english">
+            This sentence is in english. Just to be sure in case something is wrong.
+        </div>
+    </div>
+
+    <div data-role="footer" id="myPageFooter2" data-position="fixed">
+        <h1 id="contentFooter"></h1>
+    </div>
+</div>-->
+<!-- End language page -->
+
+<!-- Start menu Page -->
+<div data-role="page" id="menuPage" data-position="fixed">
+    <div data-role="panel" id="overlayPanelmenuPage" data-display="overlay" data-position-fixed="true">
+
+        <a href="#" class="resetMenuAnimation color currentPage" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language closeMenu" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
+        </ul>
+        <a href="#aboutPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
+    </div>
+    <div data-role="header" id="headermenuPage" data-position="fixed" data-tap-toggle="false">
+        <div id="nav-icon1menuPage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="contentTitle"></h1>
+    </div>
+    <div class="loading_image">
+        <img src="images/loader.gif" alt="loading" />
+    </div>
+    <div data-role="main" class="ui-content">
+        <div id="menuLanguageContent">
+            <!-- serbian menu -->
+            <div class="contentBody_serbian">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage" data-transition="none">Map</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#guidePage" data-transition="none">Gajd</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#introPage" data-transition="none" class="introLink">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#gamePage" data-transition="none">Igrica</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#eventPage" data-transition="none">dogadjaji</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#infoPage" data-transition="none">Informacije</a></h4>
+                </div>
+            </div>
+
+            <!-- croatian menu -->
+            <div class="contentBody_croatian">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage" data-transition="none">Map</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#guidePage" data-transition="none">Gajd</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#introPage" data-transition="none" class="introLink">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#gamePage" data-transition="none">Igrica</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#eventPage" data-transition="none">dogadjaji</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#infoPage" data-transition="none">Informacije</a></h4>
+                </div>
+            </div>
+
+            <!-- hungarian menu -->
+            <div class="contentBody_hungarian">
+                <div class="tile red">
+                    <h3 class="title"><a href="#mapPage" data-transition="none">Térkép</a></h3>
+                </div>
+                <div class="tile orange">
+                    <h3 class="title"><a href="#guidePage" data-transition="none">Vezetés</a></h3>
+                </div>
+
+
+                <div class="tile purple">
+                    <h3 class="title"><a href="#introPage" data-transition="none" class="introLink">Intro</a></h3>
+                </div>
+                <div class="tile blue">
+                    <h3 class="title"><a href="#gamePage" data-transition="none">Játék</a></h3>
+                </div>
+
+
+                <div class="tile green">
+                    <h3 class="title"><a href="#eventPage" data-transition="none">Események</a></h3>
+                </div>
+                <div class="tile asphalt">
+                    <h3 class="title"><a href="#infoPage" data-transition="none">Információk</a></h3>
+                </div>
+            </div>
+
+            <!-- german menu -->
+            <div class="contentBody_german">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage" data-transition="none">Karte</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#guidePage" data-transition="none">Führung</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#introPage" data-transition="none" class="introLink">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#gamePage" data-transition="none">Spiel</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#eventPage" data-transition="none">Geschehen</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#infoPage" data-transition="none">Info</a></h4>
+                </div>
+            </div>
+
+            <!-- english menu -->
+            <div class="contentBody_english">
+                <div class="tile red">
+                    <h4 class="title"><a href="#mapPage" data-transition="none">Map</a></h4>
+                </div>
+                <div class="tile orange">
+                    <h4 class="title"><a href="#guidePage" data-transition="none">Guide</a></h4>
+                </div>
+
+
+                <div class="tile purple">
+                    <h4 class="title"><a href="#introPage" data-transition="none" class="introLink">Intro</a></h4>
+                </div>
+                <div class="tile blue">
+                    <h4 class="title"><a href="#gamePage" data-transition="none">Game</a></h4>
+                </div>
+
+
+                <div class="tile green">
+                    <h4 class="title"><a href="#eventPage" data-transition="none">Events</a></h4>
+                </div>
+                <div class="tile asphalt">
+                    <h4 class="title"><a href="#infoPage" data-transition="none">Info</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer" id="myPageFooter3" data-position="fixed" data-tap-toggle="false">
+        <h1 class="contentFooter"></h1>
+    </div>
+</div>
+<!-- End menu page -->
+
+<!-- Start info page -->
+
+<div data-role="page" id="infoPage" data-position="fixed">
+    <div data-role="panel" id="overlayPanelinfoPage" data-display="overlay" data-position-fixed="true">
+
+        <a href="#menuPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language closeMenu" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
+        </ul>
+        <a href="#aboutPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
+    </div>
+    <div data-role="header" id="headerinfoPage" data-position="fixed" data-tap-toggle="false">
+        <div id="nav-icon1infoPage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="contentTitle"></h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div class="info-content">
+
+        </div>
+    </div>
+
+    <div data-role="footer" id="myPageFooter4" data-position="fixed" data-tap-toggle="false">
+        <h1 class="contentFooter"></h1>
+    </div>
+</div>
+
+
+<!-- End info page-->
+
+
+<!-- Start about page -->
+
+
+<div data-role="page" id="aboutPage" data-position="fixed">
+    <div data-role="panel" id="overlayPanelaboutPage" data-display="overlay" data-position-fixed="true">
+
+        <a href="#menuPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language closeMenu" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
+        </ul>
+        <a href="#aboutPage" class="resetMenuAnimation color currentPage" data-transition="none"><span class="menuContentLangAbout"></span></a>
+    </div>
+    <div data-role="header" id="headeraboutPage" data-position="fixed" data-tap-toggle="false">
+        <div id="nav-icon1aboutPage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="contentTitle"></h1>
+    </div>
+    <div data-role="main" class="ui-content">
+            <div class="about-content">
+                <div class="contentBody_serbian">
+                    <p>Gradski muzej u Subotici smešten je u jednu od najlepših secesijskih zgrada. Građena je po planu braće Vago. Nekad je bila štamparija, a od 2008. godine, uz pomoć lokalne samouprave, preuređena je i koristi se za potrebe muzeja. U zgradu lepog izgleda smestio se muzej u kome se danas prikazuju povremene izložbe, dok je likovna galerija na raspolaganju publike. Stalna postavka je u pripremi.</p>
+
+                </div>
+                <div class="contentBody_croatian">
+                    <p>Gradski muzej u Subotici smešten je u jednu od najlepših secesijskih zgrada. Građena je po planu braće Vago. Nekad je bila štamparija, a od 2008. godine, uz pomoć lokalne samouprave, preuređena je i koristi se za potrebe muzeja. U zgradu lepog izgleda smestio se muzej u kome se danas prikazuju povremene izložbe, dok je likovna galerija na raspolaganju publike. Stalna postavka je u pripremi.</p>
+
+                </div>
+                <div class="contentBody_hungarian">
+                    <p>A Városi Múzeum Szabadka egyik legszebb szecessziós épületében helyezkedik el, melyet a Vágó testvérek terveztek. A valamikori nyomdaépületet 2008-ban újította fel a város önkormányzata kimondottan a múzeum céljaira. Az impozáns épületbe költözött múzeum időszaki kiállításaival és képzőművészeti galériájával várja az idelátogatókat, az állandó kiállítás előkészítése pedig folyamatban van.</p>
+
+                </div>
+                <div class="contentBody_german">
+                    <p>Das Städtische Museum von Subotica liegt in einem der eindrucksvollsten Secession Gebäude, die von den Brüdern Vágó entworfen wurde. Der ehemalige Pressehaus wurde im Jahr 2008 von der lokalen Regierung wieder hergestellt, um die Bedürfnisse und Ziele des Museums passen. Dies ist, wo heute das Museum erwartet die Besucher mit saisonalen Ausstellungen und seiner Kunstgalerie, während der Dauerausstellung ist im Bau.</p>
+
+                </div>
+                <div class="contentBody_english">
+                    <p>The Municipal Museum of Subotica is located in one of the most impressive Secession buildings, designed by the Vágó brothers. The former press building was restored in 2008 by the local government to fit the needs and purposes of the museum. This is where today the museum awaits visitors with seasonal exhibitions and its fine art gallery, while the permanent exhibition is under construction.</p>
+
+                </div>
+                <img src="img/muzeum.png" alt="museum_building" />
+            </div>
+    </div>
+    <div data-role="footer" id="myPageFooter5" data-position="fixed" data-tap-toggle="false">
+        <h1 class="contentFooter"></h1>
+    </div>
+</div>
+
+
+<!-- End about page -->
+
+<!-- Start event page -->
+
+
+<div data-role="page" id="eventPage" data-position="fixed">
+    <div data-role="panel" id="overlayPaneleventPage" data-display="overlay" data-position-fixed="true">
+
+        <a href="#menuPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language closeMenu" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
+        </ul>
+        <a href="#aboutPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
+    </div>
+    <div data-role="header" id="headereventPage" data-position="fixed" data-tap-toggle="false">
+        <div id="nav-icon1eventPage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="contentTitle"></h1>
+    </div>
+    <div class="loading_image">
+        <img src="images/loader.gif" alt="loading" />
+    </div>
+    <div data-role="main" class="ui-content">
+        <div class="event-content">
+
+        </div>
+        <div class="load-content">
+
+        </div>
+
+    </div>
+    <div data-role="footer" id="myPageFooter6" data-position="fixed" data-tap-toggle="false">
+        <h1 class="contentFooter"></h1>
+    </div>
+</div>
+
+
+<!-- End event page -->
+
+
+<!-- Start guide page -->
+
+
+<div data-role="page" id="guidePage" data-position="fixed">
+    <div data-role="panel" id="overlayPanelguidePage" data-display="overlay" data-position-fixed="true">
+
+        <a href="#menuPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language closeMenu" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
+        </ul>
+        <a href="#aboutPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
+    </div>
+    <div data-role="header" id="headerguidePage" data-position="fixed" data-tap-toggle="false">
+        <div id="nav-icon1guidePage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="contentTitle"></h1>
+    </div>
+    <div data-role="main" class="ui-content">
+
+    </div>
+    <div data-role="footer" id="myPageFooter8" data-position="fixed" data-tap-toggle="false">
+        <h1 class="contentFooter"></h1>
+    </div>
+</div>
+
+
+<!-- End guide page -->
+
+
+<!-- Start map page -->
+
+
+<div data-role="page" id="mapPage" data-position="fixed">
+    <div data-role="panel" id="overlayPanelmapPage" data-display="overlay" data-position-fixed="true">
+
+        <a href="#menuPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLang"></span></a>
+        <a href="#" class="showLanguage color_next" data-transition="none"><span class="menuContentLangall"></span><span
+                class="chooseLanguage">+</span></a>
+        <ul class="allLanguage">
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="serbian"
+                   data-transition="none"><span class="menuContentSerbian"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="hungarian"
+                   data-transition="none"><span class="menuContentLangHun"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="croatian"
+                   data-transition="none"><span class="menuContentLangCro"></span></a></li>
+            <li><a href="" class="resetMenuAnimation color_next closeMenu" data-name="english"
+                   data-transition="none"><span class="menuContentEng"></span></a>
+            </li>
+            <li><a href="" class="resetMenuAnimation color_next last_language closeMenu" data-name="german"
+                   data-transition="none"><span class="menuContentLangGr"></span></a></li>
+        </ul>
+        <a href="#aboutPage" class="resetMenuAnimation color" data-transition="none"><span class="menuContentLangAbout"></span></a>
+    </div>
+    <div data-role="header" id="headermapPage" data-position="fixed" data-tap-toggle="false">
+        <div id="nav-icon1mapPage" class="navIconAnimation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="contentTitle"></h1>
+    </div>
+    <div data-role="main" class="ui-content">
+        <img src="img/map3.png" alt="guide map" /> <hr />
+        <div class="map-content">
+
+        </div>
+    </div>
+    <div data-role="footer" id="myPageFooter9" data-position="fixed" data-tap-toggle="false">
+        <h1 class="contentFooter"></h1>
+    </div>
+</div>
+
+
+<!-- End map page -->
+
+</body>
+</html>
