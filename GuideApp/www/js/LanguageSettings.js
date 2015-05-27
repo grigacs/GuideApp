@@ -121,6 +121,8 @@ $(document).on("tap", ".allLanguage li", function (event) {
     getDataFromJson();
     getMapInformation();
     getInformation();
+
+
 });
 
 
